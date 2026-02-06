@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Giới thiệu – Website 3 Ngày | Câu chuyện và giá trị cốt lõi</title>
+  <meta name="description" content="Tìm hiểu về Website 3 Ngày – đội ngũ thiết kế website chuyên nghiệp với 7 năm kinh nghiệm, cam kết mang đến giải pháp web thực chiến, không màu mè." />
+
+  <style>
+    /* ================= VARIABLES ================= */
+    :root {
+      --primary: #0066cc;
+      --primary-dark: #004999;
+      --secondary: #00cc66;
+      --text: #1a1a1a;
+      --text-muted: #666666;
+      --bg: #ffffff;
+      --bg-soft: #f8f9fa;
+      --bg-light: #ffffff;
+      --border: #e5e7eb;
+      --shadow: rgba(0, 0, 0, 0.08);
+      --radius: 12px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ================= RESET ================= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: var(--transition);
+    }
+
+    /* ================= CONTAINER ================= */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ================= HEADER ================= */
+    .header {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      z-index: 1000;
+      padding: 16px 0;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--primary);
+    }
+
+    .logo img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav-link {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text);
+      padding: 8px 0;
+      position: relative;
+    }
+
+    .nav-link:hover {
+      color: var(--primary);
+    }
+
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--primary);
+    }
+
+    .nav-cta {
+      background: var(--primary);
+      color: white;
+      padding: 10px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+
+    .nav-cta:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--text);
+    }
+
+    /* ================= HERO ================= */
+    .hero {
+      position: relative;
+      padding: 80px 0 60px;
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      overflow: hidden;
+    }
+
+    .hero-blur {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.4;
+      pointer-events: none;
+    }
+
+    .blur-1 {
+      width: 400px;
+      height: 400px;
+      background: #0066cc;
+      top: -100px;
+      left: -100px;
+    }
+
+    .blur-2 {
+      width: 500px;
+      height: 500px;
+      background: #00cc66;
+      bottom: -150px;
+      right: -150px;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero-eyebrow {
+      display: inline-block;
+      background: rgba(0, 102, 204, 0.1);
+      color: var(--primary);
+      padding: 8px 20px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 24px;
+      letter-spacing: 0.5px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      color: var(--text);
+    }
+
+    .hero h1 .highlight {
+      color: var(--primary);
+      position: relative;
+      display: inline-block;
+    }
+
+    .hero-desc {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 700px;
+      margin: 0 auto 40px;
+      line-height: 1.8;
+    }
+
+    /* ================= SECTIONS ================= */
+    .section {
+      padding: 80px 0;
+    }
+
+    .section-soft {
+      background: var(--bg-soft);
+    }
+
+    .section-light {
+      background: var(--bg-light);
+    }
+
+    .section-head {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 60px;
+    }
+
+    .section-head h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+
+    .section-head p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ================= STORY ================= */
+    .story-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .story-content p {
+      font-size: 1.05rem;
+      line-height: 1.9;
+      margin-bottom: 24px;
+      color: var(--text);
+    }
+
+    .story-content strong {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .story-highlight {
+      background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+      border-left: 4px solid #f59e0b;
+      padding: 24px 32px;
+      border-radius: var(--radius);
+      margin: 40px 0;
+    }
+
+    .story-highlight p {
+      font-size: 1.1rem;
+      font-style: italic;
+      margin: 0;
+      color: var(--text);
+    }
+
+    /* ================= TIMELINE ================= */
+    .timeline {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 3px;
+      height: 100%;
+      background: var(--border);
+      top: 0;
+    }
+
+    .timeline-item {
+      display: flex;
+      gap: 40px;
+      margin-bottom: 60px;
+      position: relative;
+    }
+
+    .timeline-item:nth-child(odd) {
+      flex-direction: row-reverse;
+      text-align: right;
+    }
+
+    .timeline-content {
+      flex: 1;
+      background: white;
+      padding: 28px;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 12px var(--shadow);
+      transition: var(--transition);
+    }
+
+    .timeline-content:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px var(--shadow);
+    }
+
+    .timeline-year {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .timeline-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    .timeline-desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 20px;
+      background: var(--primary);
+      border: 4px solid white;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px var(--shadow);
+      z-index: 2;
+    }
+
+    /* ================= STATS ================= */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 32px;
+      margin-top: 40px;
+    }
+
+    .stat-card {
+      background: white;
+      padding: 32px;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 12px var(--shadow);
+      text-align: center;
+      transition: var(--transition);
+    }
+
+    .stat-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px var(--shadow);
+    }
+
+    .stat-number {
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 1rem;
+      color: var(--text);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .stat-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* ================= TEAM VALUES ================= */
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+    }
+
+    .value-card {
+      background: white;
+      padding: 32px;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 12px var(--shadow);
+      transition: var(--transition);
+      border-top: 4px solid var(--primary);
+    }
+
+    .value-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px var(--shadow);
+    }
+
+    .value-icon {
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .value-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    .value-card p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ================= TEAM INTRO ================= */
+    .team-intro {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 12px var(--shadow);
+    }
+
+    .team-intro h3 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: var(--text);
+    }
+
+    .team-intro p {
+      font-size: 1.05rem;
+      line-height: 1.9;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+
+    .team-intro ul {
+      list-style: none;
+      margin-top: 24px;
+    }
+
+    .team-intro li {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 1rem;
+      color: var(--text-muted);
+    }
+
+    .team-intro li:last-child {
+      border-bottom: none;
+    }
+
+    .team-intro li strong {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* ================= BUTTONS ================= */
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      transition: var(--transition);
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(0, 102, 204, 0.3);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+
+    .btn-outline:hover {
+      background: var(--primary);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    /* ================= CTA ================= */
+    .cta {
+      background: linear-gradient(135deg, #0066cc 0%, #004999 100%);
+      color: white;
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .cta-logo {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 24px;
+      filter: brightness(0) invert(1);
+    }
+
+    .cta h2 {
+      font-size: 2.2rem;
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+
+    .cta p {
+      font-size: 1.1rem;
+      margin-bottom: 32px;
+      opacity: 0.95;
+      line-height: 1.8;
+    }
+
+    .cta .btn-outline {
+      border-color: white;
+      color: white;
+    }
+
+    .cta .btn-outline:hover {
+      background: white;
+      color: var(--primary);
+    }
+
+    .cta-note {
+      display: block;
+      margin-top: 20px;
+      font-size: 0.85rem;
+      opacity: 0.8;
+    }
+
+    /* ================= UTILITIES ================= */
+    .text-center {
+      text-align: center;
+    }
+
+    .mt-40 {
+      margin-top: 40px;
+    }
+
+    .mt-20 {
+      margin-top: 20px;
+    }
+
+    .mb-40 {
+      margin-bottom: 40px;
+    }
+
+    /* ================= RESPONSIVE ================= */
+    @media (max-width: 768px) {
+      .nav-menu {
+        position: fixed;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 24px;
+        box-shadow: 0 4px 12px var(--shadow);
+        transform: translateY(-150%);
+        transition: var(--transition);
+        gap: 16px;
+      }
+
+      .nav-menu.active {
+        transform: translateY(0);
+      }
+
+      .nav-toggle {
+        display: block;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero-desc {
+        font-size: 1rem;
+      }
+
+      .section-head h2 {
+        font-size: 1.8rem;
+      }
+
+      .timeline::before {
+        left: 20px;
+      }
+
+      .timeline-item {
+        flex-direction: column !important;
+        text-align: left !important;
+        padding-left: 60px;
+      }
+
+      .timeline-dot {
+        left: 20px;
+      }
+
+      .stat-number {
+        font-size: 2.2rem;
+      }
+
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .team-intro {
+        padding: 24px;
+      }
+
+      .cta h2 {
+        font-size: 1.6rem;
+      }
+    }
+
+    /* ================= ANIMATIONS ================= */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in-up {
+      animation: fadeInUp 0.6s ease-out forwards;
+      opacity: 0;
+    }
+
+    .fade-in-up:nth-child(1) { animation-delay: 0.1s; }
+    .fade-in-up:nth-child(2) { animation-delay: 0.2s; }
+    .fade-in-up:nth-child(3) { animation-delay: 0.3s; }
+    .fade-in-up:nth-child(4) { animation-delay: 0.4s; }
+  </style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+  <div class="container nav">
+    <a href="/website-3-ngay/" class="logo">
+      <img src="/assets/img/global/logo.png" alt="Website 3 Ngày">
+      <span class="logo-text">Website 3 Ngày</span>
+    </a>
+
+    <nav class="nav-menu" id="navMenu">
+      <a class="nav-link" href="/website-3-ngay/index.html">Trang chủ</a>
+      <a class="nav-link active" href="/website-3-ngay/about/">Giới thiệu</a>
+      <a class="nav-link" href="/website-3-ngay/process/">Quy trình</a>
+      <a class="nav-link" href="/website-3-ngay/demos/">Demo</a>
+      <a class="nav-link" href="/website-3-ngay/pricing/">Bảng giá</a>
+      <a class="nav-link nav-cta" href="/contact/">Liên hệ</a>
+    </nav>
+
+    <button class="nav-toggle" id="navToggle">☰</button>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-blur blur-1"></div>
+  <div class="hero-blur blur-2"></div>
+
+  <div class="hero-content">
+    <p class="hero-eyebrow">📖 GIỚI THIỆU VỀ WEBSITE 3 NGÀY</p>
+
+    <h1>
+      Câu chuyện về<br>
+      <span class="highlight">Website 3 Ngày</span>
+    </h1>
+
+    <p class="hero-desc">
+      Chúng tôi không phải công ty lớn. Chỉ là một team nhỏ với 7 năm kinh nghiệm,
+      <strong>làm việc nghiêm túc</strong> và cam kết mang đến <strong>giải pháp website thực chiến</strong>
+      – không màu mè – không hứa suông.
+    </p>
+  </div>
+</section>
+
+<!-- ================= STORY ================= -->
+<section class="section section-light">
+  <div class="container">
+    <div class="story-content">
+      <p>
+        Năm 2018, tôi bắt đầu nhận làm website freelance trong khi đang làm dev cho một agency ở Sài Gòn. 
+        Lúc đó thấy nhiều khách hàng bị "dắt mũi" – trả tiền cao nhưng nhận lại sản phẩm không như mong đợi,
+        kéo dài vài tháng mà vẫn chưa xong, hoặc xong rồi nhưng <strong>không bán được hàng</strong>.
+      </p>
+
+      <p>
+        Tôi nghĩ: <strong>"Tại sao không làm một dịch vụ đơn giản, rõ ràng, nhanh và hiệu quả thật?"</strong>
+      </p>
+
+      <div class="story-highlight">
+        <p>
+          💡 "Website không phải để khoe – Website là để bán hàng. Đơn giản vậy thôi."
+        </p>
+      </div>
+
+      <p>
+        Từ đó, tôi bắt đầu xây dựng quy trình riêng: <strong>thiết kế nhanh</strong>, <strong>code gọn</strong>,
+        <strong>tối ưu chuyển đổi</strong>, và quan trọng nhất – <strong>bàn giao đúng hẹn</strong>.
+        Không kéo dài – không phát sinh – không hứa suông.
+      </p>
+
+      <p>
+        Sau 7 năm, chúng tôi đã hoàn thành <strong>hơn 150 website</strong> cho các cá nhân kinh doanh, 
+        shop nhỏ, startup, và SME. 98% khách hàng hài lòng và quay lại khi cần nâng cấp.
+      </p>
+
+      <p>
+        <strong>Website 3 Ngày</strong> ra đời từ niềm tin rằng: 
+        <strong>"Làm website phải thực chiến – phải bán được hàng – và phải hoàn thành đúng hẹn."</strong>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TIMELINE ================= -->
+<section class="section section-soft">
+  <div class="container">
+    <div class="section-head">
+      <h2>Hành trình phát triển</h2>
+      <p>Từ freelancer cá nhân đến team chuyên nghiệp với quy trình chuẩn</p>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item fade-in-up">
+        <div class="timeline-content">
+          <span class="timeline-year">2018</span>
+          <h3 class="timeline-title">Khởi đầu</h3>
+          <p class="timeline-desc">
+            Bắt đầu nhận làm website freelance. Hoàn thành 15 dự án đầu tiên với cam kết "xong trong 1 tuần".
+          </p>
+        </div>
+        <div class="timeline-dot"></div>
+      </div>
+
+      <div class="timeline-item fade-in-up">
+        <div class="timeline-content">
+          <span class="timeline-year">2019-2020</span>
+          <h3 class="timeline-title">Xây dựng quy trình</h3>
+          <p class="timeline-desc">
+            Chuẩn hóa quy trình thiết kế và phát triển. Phát triển thư viện template riêng để tăng tốc độ làm việc.
+            Hoàn thành 50+ website trong 2 năm.
+          </p>
+        </div>
+        <div class="timeline-dot"></div>
+      </div>
+
+      <div class="timeline-item fade-in-up">
+        <div class="timeline-content">
+          <span class="timeline-year">2021-2022</span>
+          <h3 class="timeline-title">Mở rộng team</h3>
+          <p class="timeline-desc">
+            Mở rộng team với 2 designer và 1 dev. Ra mắt chính thức thương hiệu "Website 3 Ngày".
+            Tối ưu quy trình bàn giao và hỗ trợ khách hàng.
+          </p>
+        </div>
+        <div class="timeline-dot"></div>
+      </div>
+
+      <div class="timeline-item fade-in-up">
+        <div class="timeline-content">
+          <span class="timeline-year">2023-2025</span>
+          <h3 class="timeline-title">Chuyên sâu & Tối ưu</h3>
+          <p class="timeline-desc">
+            Tập trung vào website bán hàng với tỉ lệ chuyển đổi cao. Nghiên cứu UI/UX theo hành vi người dùng Việt Nam.
+            Đạt mốc 150+ website hoàn thành với 98% khách hàng hài lòng.
+          </p>
+        </div>
+        <div class="timeline-dot"></div>
+      </div>
+
+      <div class="timeline-item fade-in-up">
+        <div class="timeline-content">
+          <span class="timeline-year">2026</span>
+          <h3 class="timeline-title">Hiện tại</h3>
+          <p class="timeline-desc">
+            Tiếp tục cải tiến quy trình và công nghệ. Mục tiêu: giúp 500+ doanh nghiệp nhỏ có website 
+            chuyên nghiệp để phát triển kinh doanh online hiệu quả.
+          </p>
+        </div>
+        <div class="timeline-dot"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STATS ================= -->
+<section class="section section-light">
+  <div class="container">
+    <div class="section-head">
+      <h2>Con số ấn tượng</h2>
+      <p>Những thành quả chúng tôi đạt được sau 7 năm hoạt động</p>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card fade-in-up">
+        <span class="stat-number">7+</span>
+        <p class="stat-label">Năm kinh nghiệm</p>
+        <p class="stat-desc">Từ 2018 đến nay</p>
+      </div>
+
+      <div class="stat-card fade-in-up">
+        <span class="stat-number">150+</span>
+        <p class="stat-label">Website hoàn thành</p>
+        <p class="stat-desc">Mọi ngành nghề</p>
+      </div>
+
+      <div class="stat-card fade-in-up">
+        <span class="stat-number">98%</span>
+        <p class="stat-label">Khách hàng hài lòng</p>
+        <p class="stat-desc">Đánh giá 4.8/5 sao</p>
+      </div>
+
+      <div class="stat-card fade-in-up">
+        <span class="stat-number">3-7</span>
+        <p class="stat-label">Ngày hoàn thành</p>
+        <p class="stat-desc">Bàn giao đúng hẹn</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VALUES ================= -->
+<section class="section section-soft">
+  <div class="container">
+    <div class="section-head">
+      <h2>Giá trị cốt lõi</h2>
+      <p>Những nguyên tắc chúng tôi cam kết giữ vững trong mọi dự án</p>
+    </div>
+
+    <div class="values-grid">
+      <div class="value-card fade-in-up">
+        <span class="value-icon">🎯</span>
+        <h3>Tập trung vào kết quả</h3>
+        <p>
+          Mọi quyết định thiết kế đều hướng đến một mục tiêu duy nhất: 
+          <strong>giúp khách hàng bán được hàng</strong>. Không làm đẹp cho có, không thêm tính năng vô nghĩa.
+        </p>
+      </div>
+
+      <div class="value-card fade-in-up">
+        <span class="value-icon">⚡</span>
+        <h3>Tốc độ & Hiệu quả</h3>
+        <p>
+          Thời gian của bạn là vàng. Chúng tôi cam kết bàn giao đúng hẹn – không kéo dài – 
+          không hứa suông. <strong>3-7 ngày có website xịn để bán hàng ngay.</strong>
+        </p>
+      </div>
+
+      <div class="value-card fade-in-up">
+        <span class="value-icon">💎</span>
+        <h3>Chất lượng thật</h3>
+        <p>
+          Không chạy theo số lượng. Mỗi dự án đều được chăm chút kỹ lưỡng: 
+          thiết kế chuẩn UI/UX, code tối ưu, test kỹ trên mọi thiết bị trước khi bàn giao.
+        </p>
+      </div>
+
+      <div class="value-card fade-in-up">
+        <span class="value-icon">🤝</span>
+        <h3>Minh bạch & Trung thực</h3>
+        <p>
+          Tư vấn thẳng thắn ngay từ đầu: <strong>làm được hay không – gói nào phù hợp – giá bao nhiêu</strong>.
+          Không phát sinh chi phí – không ép buộc – không làm điều mình không tin.
+        </p>
+      </div>
+
+      <div class="value-card fade-in-up">
+        <span class="value-icon">🔒</span>
+        <h3>Cam kết chất lượng</h3>
+        <p>
+          <strong>Hoàn tiền 100%</strong> nếu không đúng cam kết về thời gian và chất lượng.
+          Đây không phải khẩu hiệu – đây là trách nhiệm chúng tôi với từng khách hàng.
+        </p>
+      </div>
+
+      <div class="value-card fade-in-up">
+        <span class="value-icon">📚</span>
+        <h3>Học hỏi liên tục</h3>
+        <p>
+          Công nghệ web thay đổi nhanh. Chúng tôi liên tục cập nhật kiến thức mới, 
+          nghiên cứu hành vi người dùng, để mang đến giải pháp tốt nhất cho khách hàng.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TEAM ================= -->
+<section class="section section-light">
+  <div class="container">
+    <div class="section-head">
+      <h2>Đội ngũ của chúng tôi</h2>
+      <p>Team nhỏ nhưng chuyên sâu – mỗi người đều có 5+ năm kinh nghiệm thực chiến</p>
+    </div>
+
+    <div class="team-intro">
+      <h3>🧑‍💻 Ai đang làm website cho bạn?</h3>
+      <p>
+        Chúng tôi không phải công ty lớn với hàng chục nhân viên. Team chỉ có <strong>5 người cốt cán</strong>,
+        mỗi người đều có <strong>5-7 năm kinh nghiệm</strong> trong lĩnh vực của mình.
+      </p>
+      <p>
+        Đây là điểm mạnh: <strong>bạn không bị chuyển tay qua nhiều người</strong>. 
+        Từ tư vấn, thiết kế, code đến bàn giao – bạn luôn được làm việc trực tiếp với những người 
+        hiểu rõ dự án và cam kết chất lượng.
+      </p>
+
+      <ul>
+        <li><strong>1 Lead Developer</strong> – 7 năm kinh nghiệm với WordPress, Laravel, React</li>
+        <li><strong>2 UI/UX Designers</strong> – Chuyên thiết kế website bán hàng, landing page tối ưu chuyển đổi</li>
+        <li><strong>1 Frontend Developer</strong> – Chuyên code giao diện chuẩn, responsive, tốc độ cao</li>
+        <li><strong>1 Content Specialist</strong> – Hỗ trợ viết nội dung chuẩn SEO, tư vấn cấu trúc thông tin</li>
+      </ul>
+
+      <p style="margin-top: 24px;">
+        <strong>Vì team nhỏ, chúng tôi chỉ nhận tối đa 10-12 dự án mỗi tháng</strong> 
+        để đảm bảo chất lượng và tiến độ cam kết. Nếu bạn đang cần gấp, 
+        hãy liên hệ sớm để được ưu tiên.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY TRUST ================= -->
+<section class="section section-soft">
+  <div class="container">
+    <div class="section-head">
+      <h2>Tại sao nên tin tưởng?</h2>
+      <p>Những lý do thực tế để bạn yên tâm làm việc với chúng tôi</p>
+    </div>
+
+    <div class="story-content">
+      <p>
+        <strong>1. Portfolio minh bạch:</strong> Chúng tôi có hơn 150 dự án thực tế. 
+        Bạn có thể xem demo, tham khảo và chat trực tiếp với một số khách hàng cũ nếu muốn.
+      </p>
+
+      <p>
+        <strong>2. Quy trình rõ ràng:</strong> Từ ngày đầu tiên, bạn sẽ biết chính xác: 
+        làm những gì – mất bao lâu – chi phí bao nhiêu – bàn giao khi nào. Không mập mờ.
+      </p>
+
+      <p>
+        <strong>3. Thanh toán chia đợt:</strong> 50% khi bắt đầu – 50% khi hoàn thành và bạn hài lòng. 
+        Nếu không hài lòng – hoàn tiền 100%. Đơn giản vậy.
+      </p>
+
+      <p>
+        <strong>4. Hỗ trợ sau bàn giao:</strong> Không "ném đá giấu tay". 
+        Chúng tôi hỗ trợ 1-3 tháng sau khi bàn giao (tùy gói) để bạn yên tâm vận hành.
+      </p>
+
+      <p>
+        <strong>5. Tư vấn thẳng thắn:</strong> Nếu dự án không phù hợp hoặc chúng tôi không làm được – 
+        sẽ nói thẳng ngay từ đầu. Không nhận làm rồi để khách thất vọng.
+      </p>
+
+      <div class="story-highlight" style="margin-top: 40px;">
+        <p>
+          💬 "Làm ít dự án nhưng làm tốt, còn hơn làm nhiều rồi để khách thất vọng. 
+          Đó là nguyên tắc chúng tôi giữ suốt 7 năm qua."
+        </p>
+      </div>
+    </div>
+
+    <div class="text-center mt-40">
+      <a href="/website-3-ngay/demos/" class="btn btn-primary">Xem các dự án đã làm</a>
+      <a href="https://zalo.me/0373453757" class="btn btn-outline" style="margin-left: 16px;">Chat Zalo để tư vấn</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<section class="cta">
+  <div class="container text-center">
+    <img src="/assets/img/global/logo.png" class="cta-logo" alt="Website 3 Ngày">
+    <h2>Bạn muốn biết thêm về chúng tôi?</h2>
+    <p>
+      Chat Zalo để trao đổi trực tiếp – tư vấn miễn phí:<br>
+      <strong>Hỏi gì cũng trả lời thẳng thắn – không vòng vo – không ép buộc.</strong>
+    </p>
+    <a href="https://zalo.me/0373453757" class="btn btn-outline">Chat Zalo ngay (Miễn phí)</a>
+    <small class="cta-note">🔒 Phản hồi trong 5 phút – Tư vấn không ràng buộc – Không spam</small>
+  </div>
+</section>
+
+<script>
+  // Mobile Menu Toggle
+  const navToggle = document.getElementById('navToggle');
+  const navMenu = document.getElementById('navMenu');
+
+  navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    navToggle.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+      navMenu.classList.remove('active');
+      navToggle.textContent = '☰';
+    }
+  });
+
+  // Intersection Observer for fade-in animations
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, observerOptions);
+
+  // Observe all fade-in elements
+  document.querySelectorAll('.fade-in-up').forEach(el => {
+    observer.observe(el);
+  });
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+
+  // Header scroll effect
+  let lastScroll = 0;
+  const header = document.querySelector('.header');
+
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll > 100) {
+      header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+    } else {
+      header.style.boxShadow = 'none';
+    }
+
+    lastScroll = currentScroll;
+  });
+
+  // Stats counter animation
+  const animateCounter = (element, target, duration) => {
+    const start = 0;
+    const increment = target / (duration / 16);
+    let current = start;
+
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        element.textContent = target + (element.dataset.suffix || '');
+        clearInterval(timer);
+      } else {
+        element.textContent = Math.floor(current) + (element.dataset.suffix || '');
+      }
+    }, 16);
+  };
+
+  // Trigger counter animation when stats come into view
+  const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const statNumber = entry.target.querySelector('.stat-number');
+        const text = statNumber.textContent;
+        const number = parseInt(text.match(/\d+/)[0]);
+        const suffix = text.replace(/\d+/g, '');
+        
+        statNumber.dataset.suffix = suffix;
+        animateCounter(statNumber, number, 1000);
+        
+        statsObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  document.querySelectorAll('.stat-card').forEach(card => {
+    statsObserver.observe(card);
+  });
+</script>
+
+</body>
+</html>
