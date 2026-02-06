@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coolmate - Thời Trang Nam Tối Giản, Bền Vững | Đổi Trả 60 Ngày</title>
+  <meta name="description" content="Coolmate - Thương hiệu thời trang nam Made in Vietnam. Áo thun, quần short, đồ lót, đồ thể thao chất lượng cao. Chính sách đổi trả 60 ngày. Miễn phí giao hàng.">
+
+  <style>
+    /* ================= RESET & BASE ================= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #2F5BE7;
+      --primary-dark: #1e3a9a;
+      --secondary: #FF6B35;
+      --text: #1a1a1a;
+      --text-light: #666666;
+      --white: #FFFFFF;
+      --bg-light: #F8F9FA;
+      --border: #E0E0E0;
+      --success: #10B981;
+      --shadow: rgba(0, 0, 0, 0.1);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
+      background: var(--white);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ================= HEADER ================= */
+    .announcement-bar {
+      background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+      color: var(--white);
+      padding: 10px 0;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--white);
+      box-shadow: 0 2px 10px var(--shadow);
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--primary);
+      text-decoration: none;
+      letter-spacing: -1px;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+      align-items: center;
+      flex: 1;
+    }
+
+    .nav-menu a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    .nav-menu a:hover {
+      color: var(--primary);
+    }
+
+    .nav-actions {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .search-box {
+      position: relative;
+    }
+
+    .search-box input {
+      padding: 10px 40px 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 25px;
+      font-size: 14px;
+      width: 250px;
+      transition: all 0.3s ease;
+    }
+
+    .search-box input:focus {
+      outline: none;
+      border-color: var(--primary);
+      width: 300px;
+    }
+
+    .search-box::after {
+      content: '🔍';
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 16px;
+    }
+
+    .icon-btn {
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      position: relative;
+      transition: transform 0.3s ease;
+    }
+
+    .icon-btn:hover {
+      transform: scale(1.1);
+    }
+
+    .cart-badge {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      background: var(--secondary);
+      color: var(--white);
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    /* ================= HERO ================= */
+    .hero {
+      position: relative;
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #EEF2FF 0%, #F8F9FA 100%);
+      overflow: hidden;
+    }
+
+    .hero-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .hero-text {
+      z-index: 2;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: var(--success);
+      color: var(--white);
+      padding: 8px 20px;
+      border-radius: 25px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .hero-title {
+      font-size: clamp(42px, 6vw, 64px);
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 24px;
+      letter-spacing: -1px;
+    }
+
+    .hero-title .gradient-text {
+      background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-desc {
+      font-size: 18px;
+      color: var(--text-light);
+      margin-bottom: 32px;
+      line-height: 1.8;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 16px 36px;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 16px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: var(--white);
+      border: 2px solid var(--primary);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(47, 91, 231, 0.3);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--text);
+      border: 2px solid var(--text);
+    }
+
+    .btn-outline:hover {
+      background: var(--text);
+      color: var(--white);
+    }
+
+    .hero-features {
+      display: flex;
+      gap: 32px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .hero-feature {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .hero-feature-icon {
+      font-size: 24px;
+    }
+
+    .hero-feature-text {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-light);
+    }
+
+    .hero-image {
+      position: relative;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .product-showcase {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .showcase-item {
+      background: var(--white);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px var(--shadow);
+      transition: transform 0.3s ease;
+    }
+
+    .showcase-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .showcase-image {
+      width: 100%;
+      height: 250px;
+      background: linear-gradient(135deg, #C7D2FE 0%, #A5B4FC 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 80px;
+    }
+
+    .showcase-info {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .showcase-name {
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .showcase-price {
+      color: var(--primary);
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    /* ================= SECTION ================= */
+    .section {
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-label {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 900;
+      margin-bottom: 16px;
+    }
+
+    .section-desc {
+      font-size: 16px;
+      color: var(--text-light);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* ================= CATEGORIES ================= */
+    .categories-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+    }
+
+    .category-card {
+      background: var(--bg-light);
+      border-radius: 20px;
+      padding: 40px 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .category-card:hover {
+      background: var(--primary);
+      color: var(--white);
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(47, 91, 231, 0.3);
+    }
+
+    .category-icon {
+      font-size: 48px;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .category-name {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .category-count {
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    /* ================= PRODUCTS ================= */
+    .filter-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .filter-tabs {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .filter-tab {
+      padding: 10px 24px;
+      border-radius: 25px;
+      background: var(--bg-light);
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .filter-tab:hover,
+    .filter-tab.active {
+      background: var(--primary);
+      color: var(--white);
+    }
+
+    .sort-select {
+      padding: 10px 16px;
+      border-radius: 25px;
+      border: 1px solid var(--border);
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .product-card {
+      background: var(--white);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px var(--shadow);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 40px var(--shadow);
+    }
+
+    .product-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: var(--secondary);
+      color: var(--white);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      z-index: 2;
+    }
+
+    .product-image {
+      width: 100%;
+      height: 280px;
+      background: linear-gradient(135deg, #E0E7FF 0%, #C7D2FE 100%);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 100px;
+    }
+
+    .quick-view {
+      position: absolute;
+      bottom: -50px;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.8);
+      color: var(--white);
+      padding: 12px;
+      text-align: center;
+      font-weight: 700;
+      transition: bottom 0.3s ease;
+    }
+
+    .product-card:hover .quick-view {
+      bottom: 0;
+    }
+
+    .product-info {
+      padding: 20px;
+    }
+
+    .product-name {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .product-desc {
+      font-size: 13px;
+      color: var(--text-light);
+      margin-bottom: 12px;
+    }
+
+    .product-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .product-price {
+      font-size: 22px;
+      font-weight: 900;
+      color: var(--primary);
+    }
+
+    .product-price-old {
+      font-size: 16px;
+      color: var(--text-light);
+      text-decoration: line-through;
+      margin-left: 8px;
+    }
+
+    .btn-add-cart {
+      background: var(--primary);
+      color: var(--white);
+      border: none;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 14px;
+    }
+
+    .btn-add-cart:hover {
+      background: var(--primary-dark);
+      transform: scale(1.05);
+    }
+
+    /* ================= USP ================= */
+    .usp-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .usp-card {
+      background: var(--white);
+      border: 2px solid var(--border);
+      border-radius: 20px;
+      padding: 32px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .usp-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-5px);
+    }
+
+    .usp-icon {
+      font-size: 56px;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .usp-title {
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .usp-desc {
+      font-size: 14px;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    /* ================= TESTIMONIALS ================= */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .testimonial-card {
+      background: var(--bg-light);
+      padding: 32px;
+      border-radius: 20px;
+      position: relative;
+    }
+
+    .testimonial-quote {
+      font-size: 48px;
+      color: var(--primary);
+      opacity: 0.2;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    .testimonial-text {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--text-light);
+      margin-bottom: 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .author-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 20px;
+    }
+
+    .author-info h4 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .author-info p {
+      font-size: 13px;
+      color: var(--text-light);
+    }
+
+    .testimonial-stars {
+      color: #FFD700;
+      margin-top: 8px;
+    }
+
+    /* ================= CTA BANNER ================= */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: var(--white);
+      padding: 80px 20px;
+      text-align: center;
+      border-radius: 30px;
+      margin: 80px auto;
+      max-width: 1200px;
+    }
+
+    .cta-banner h2 {
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 900;
+      margin-bottom: 20px;
+    }
+
+    .cta-banner p {
+      font-size: 18px;
+      margin-bottom: 32px;
+      opacity: 0.9;
+    }
+
+    .cta-banner .btn {
+      background: var(--white);
+      color: var(--primary);
+    }
+
+    .cta-banner .btn:hover {
+      transform: translateY(-3px) scale(1.05);
+    }
+
+    /* ================= FOOTER ================= */
+    .footer {
+      background: var(--text);
+      color: var(--white);
+      padding: 60px 20px 20px;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-section h3 {
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .footer-section ul {
+      list-style: none;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 12px;
+    }
+
+    .footer-section ul li a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.3s ease;
+    }
+
+    .footer-section ul li a:hover {
+      color: var(--white);
+    }
+
+    .footer-desc {
+      font-size: 14px;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 20px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 12px;
+    }
+
+    .social-link {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .social-link:hover {
+      background: var(--primary);
+      transform: translateY(-3px);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 20px;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 14px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* ================= ANIMATIONS ================= */
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in {
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    /* ================= RESPONSIVE ================= */
+    @media (max-width: 768px) {
+      .nav-menu {
+        position: fixed;
+        top: 106px;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 10px 30px var(--shadow);
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+      }
+
+      .nav-menu.active {
+        transform: translateX(0);
+      }
+
+      .nav-actions {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .search-box input {
+        width: 100%;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+      }
+
+      .hero-text {
+        order: 2;
+      }
+
+      .hero-image {
+        order: 1;
+      }
+
+      .hero-cta {
+        justify-content: center;
+      }
+
+      .product-showcase {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 60px 20px;
+      }
+    }
+  </style>
+
+</head>
+<body>
+
+  <!-- ANNOUNCEMENT BAR -->
+
+  <div class="announcement-bar">
+    🎉 FLASH SALE 11.11: Giảm đến 50% + Freeship toàn quốc | 🎁 Tích điểm đổi quà
+  </div>
+
+  <!-- HEADER -->
+
+  <header class="header">
+    <nav class="nav">
+      <a href="#" class="logo">COOLMATE</a>
+
+```
+  <ul class="nav-menu" id="navMenu">
+    <li><a href="#home">Trang chủ</a></li>
+    <li><a href="#products">Sản phẩm</a></li>
+    <li><a href="#categories">Danh mục</a></li>
+    <li><a href="#about">Giới thiệu</a></li>
+    <li><a href="#contact">Liên hệ</a></li>
+  </ul>
+
+  <div class="nav-actions">
+    <div class="search-box">
+      <input type="text" placeholder="Tìm kiếm sản phẩm...">
+    </div>
+    <button class="icon-btn">
+      👤
+    </button>
+    <button class="icon-btn">
+      🛒
+      <span class="cart-badge">3</span>
+    </button>
+  </div>
+
+  <button class="menu-toggle" id="menuToggle">☰</button>
+</nav>
+```
+
+  </header>
+
+  <!-- HERO -->
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-text fade-in">
+        <span class="hero-badge">🇻🇳 Proudly Made in Vietnam</span>
+        <h1 class="hero-title">
+          Thời trang nam<br>
+          <span class="gradient-text">Tối giản & Bền vững</span>
+        </h1>
+        <p class="hero-desc">
+          Coolmate - Thương hiệu thời trang nam nội địa hàng đầu với chất liệu cao cấp: 
+          Cotton, Bamboo, Modal. Thiết kế tối giản, thoải mái mọi hoạt động.
+          <strong>Chính sách đổi trả 60 ngày không cần lý do.</strong>
+        </p>
+        <div class="hero-cta">
+          <a href="#products" class="btn btn-primary">Mua sắm ngay 🛍️</a>
+          <a href="#about" class="btn btn-outline">Tìm hiểu thêm</a>
+        </div>
+
+```
+    <div class="hero-features">
+      <div class="hero-feature">
+        <span class="hero-feature-icon">🚚</span>
+        <span class="hero-feature-text">Freeship 30k</span>
+      </div>
+      <div class="hero-feature">
+        <span class="hero-feature-icon">🔄</span>
+        <span class="hero-feature-text">Đổi trả 60 ngày</span>
+      </div>
+      <div class="hero-feature">
+        <span class="hero-feature-icon">✅</span>
+        <span class="hero-feature-text">100% chính hãng</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-image fade-in">
+    <div class="product-showcase">
+      <div class="showcase-item">
+        <div class="showcase-image">👕</div>
+        <div class="showcase-info">
+          <div class="showcase-name">Áo Polo</div>
+          <div class="showcase-price">299.000đ</div>
+        </div>
+      </div>
+      <div class="showcase-item">
+        <div class="showcase-image">👖</div>
+        <div class="showcase-info">
+          <div class="showcase-name">Quần Short</div>
+          <div class="showcase-price">249.000đ</div>
+        </div>
+      </div>
+      <div class="showcase-item">
+        <div class="showcase-image">🩳</div>
+        <div class="showcase-info">
+          <div class="showcase-name">Đồ Lót</div>
+          <div class="showcase-price">99.000đ</div>
+        </div>
+      </div>
+      <div class="showcase-item">
+        <div class="showcase-image">🧦</div>
+        <div class="showcase-info">
+          <div class="showcase-name">Tất Vớ</div>
+          <div class="showcase-price">49.000đ</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+  </section>
+
+  <!-- CATEGORIES -->
+
+  <section class="section" id="categories" style="background: var(--bg-light);">
+    <div class="section-header fade-in">
+      <p class="section-label">Danh mục</p>
+      <h2 class="section-title">Mua sắm theo danh mục</h2>
+      <p class="section-desc">Khám phá bộ sưu tập đa dạng từ áo, quần đến phụ kiện</p>
+    </div>
+
+```
+<div class="categories-grid">
+  <div class="category-card fade-in">
+    <span class="category-icon">👕</span>
+    <div class="category-name">Áo thun</div>
+    <div class="category-count">150+ sản phẩm</div>
+  </div>
+
+  <div class="category-card fade-in">
+    <span class="category-icon">👔</span>
+    <div class="category-name">Áo Polo</div>
+    <div class="category-count">80+ sản phẩm</div>
+  </div>
+
+  <div class="category-card fade-in">
+    <span class="category-icon">👖</span>
+    <div class="category-name">Quần Short</div>
+    <div class="category-count">120+ sản phẩm</div>
+  </div>
+
+  <div class="category-card fade-in">
+    <span class="category-icon">🩳</span>
+    <div class="category-name">Đồ Lót</div>
+    <div class="category-count">200+ sản phẩm</div>
+  </div>
+
+  <div class="category-card fade-in">
+    <span class="category-icon">🏃</span>
+    <div class="category-name">Đồ Thể Thao</div>
+    <div class="category-count">90+ sản phẩm</div>
+  </div>
+
+  <div class="category-card fade-in">
+    <span class="category-icon">🧦</span>
+    <div class="category-name">Phụ kiện</div>
+    <div class="category-count">65+ sản phẩm</div>
+  </div>
+</div>
+```
+
+  </section>
+
+  <!-- PRODUCTS -->
+
+  <section class="section" id="products">
+    <div class="section-header fade-in">
+      <p class="section-label">Sản phẩm</p>
+      <h2 class="section-title">Sản phẩm bán chạy nhất</h2>
+      <p class="section-desc">Được yêu thích nhất bởi hơn 500,000+ khách hàng</p>
+    </div>
+
+```
+<div class="filter-bar">
+  <div class="filter-tabs">
+    <button class="filter-tab active">Tất cả</button>
+    <button class="filter-tab">Áo thun</button>
+    <button class="filter-tab">Quần short</button>
+    <button class="filter-tab">Đồ lót</button>
+    <button class="filter-tab">Thể thao</button>
+  </div>
+
+  <select class="sort-select">
+    <option>Sắp xếp: Mới nhất</option>
+    <option>Giá: Thấp đến cao</option>
+    <option>Giá: Cao đến thấp</option>
+    <option>Bán chạy nhất</option>
+  </select>
+</div>
+
+<div class="products-grid">
+  <!-- Product 1 -->
+  <div class="product-card fade-in">
+    <span class="product-badge">Hot</span>
+    <div class="product-image">👕</div>
+    <div class="quick-view">Xem nhanh</div>
+    <div class="product-info">
+      <h3 class="product-name">Áo thun nam Coolmate Basics</h3>
+      <p class="product-desc">Cotton compact thoáng mát, form regular fit</p>
+      <div class="product-footer">
+        <div>
+          <span class="product-price">199.000đ</span>
+          <span class="product-price-old">299.000đ</span>
+        </div>
+        <button class="btn-add-cart">Thêm</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 2 -->
+  <div class="product-card fade-in">
+    <span class="product-badge">Sale 40%</span>
+    <div class="product-image">👔</div>
+    <div class="quick-view">Xem nhanh</div>
+    <div class="product-info">
+      <h3 class="product-name">Áo Polo Coolmate Essential</h3>
+      <p class="product-desc">Pique Cotton cao cấp, không bai nhão</p>
+      <div class="product-footer">
+        <div>
+          <span class="product-price">299.000đ</span>
+          <span class="product-price-old">499.000đ</span>
+        </div>
+        <button class="btn-add-cart">Thêm</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 3 -->
+  <div class="product-card fade-in">
+    <div class="product-image">👖</div>
+    <div class="quick-view">Xem nhanh</div>
+    <div class="product-info">
+      <h3 class="product-name">Quần Short Kaki Daily Wear</h3>
+      <p class="product-desc">Kaki co giãn 4 chiều, túi khóa kéo an toàn</p>
+      <div class="product-footer">
+        <div>
+          <span class="product-price">349.000đ</span>
+        </div>
+        <button class="btn-add-cart">Thêm</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 4 -->
+  <div class="product-card fade-in">
+    <span class="product-badge">Mới</span>
+    <div class="product-image">🩳</div>
+    <div class="quick-view">Xem nhanh</div>
+    <div class="product-info">
+      <h3 class="product-name">Combo 3 Quần Lót Bamboo</h3>
+      <p class="product-desc">Tre Bamboo kháng khuẩn, siêu thoáng khí</p>
+      <div class="product-footer">
+        <div>
+          <span class="product-price">249.000đ</span>
+          <span class="product-price-old">360.000đ</span>
+        </div>
+        <button class="btn-add-cart">Thêm</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 5 -->
+  <div class="product-card fade-in">
+    <div class="product-image">🏃</div>
+    <div class="quick-view">Xem nhanh</div>
+    <div class="product-info">
+      <h3 class="product-name">Áo thể thao AirFlow ExDry</h3>
+      <p class="product-desc">Công nghệ thoát nhiệt & thấm hút cực nhanh</p>
+      <div class="product-footer">
+        <div>
+          <span class="product-price">399.000đ</span>
+        </div>
+        <button class="btn-add-cart">Thêm</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 6 -->
+  <div class="product-card fade-in">
+    <div class="product-image">🧦</div>
+    <div class="quick-view">Xem nhanh</div>
+    <div class="product-info">
+      <h3 class="product-name">Combo 3 Tất cổ trung Active</h3>
+      <p class="product-desc">Cotton Compact thấm hút, không mùi hôi</p>
+      <div class="product-footer">
+        <div>
+          <span class="product-price">99.000đ</span>
+          <span class="product-price-old">150.000đ</span>
+        </div>
+        <button class="btn-add-cart">Thêm</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 7 -->
+  <div class="product-card fade-in">
+    <span class="product-badge">Best Seller</span>
+    <div class="product-image">🧥</div>
+    <div class="quick-view">Xem nhanh</div>
+    <div class="product-info">
+      <h3 class="product-name">Áo khoác Windbreaker</h3>
+      <p class="product-desc">Chống nước, chống gió, siêu nhẹ</p>
+      <div class="product-footer">
+        <div>
+          <span class="product-price">549.000đ</span>
+        </div>
+        <button class="btn-add-cart">Thêm</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 8 -->
+  <div class="product-card fade-in">
+    <div class="product-image">🎽</div>
+    <div class="quick-view">Xem nhanh</div>
+    <div class="product-info">
+      <h3 class="product-name">Bộ nỉ All-day Sweatshirt</h3>
+      <p class="product-desc">Nỉ bông mềm mại, ấm áp mùa đông</p>
+      <div class="product-footer">
+        <div>
+          <span class="product-price">699.000đ</span>
+        </div>
+        <button class="btn-add-cart">Thêm</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="text-align: center; margin-top: 50px;">
+  <a href="#" class="btn btn-primary">Xem tất cả sản phẩm 🛍️</a>
+</div>
+```
+
+  </section>
+
+  <!-- USP -->
+
+  <section class="section" id="about" style="background: var(--bg-light);">
+    <div class="section-header fade-in">
+      <p class="section-label">Cam kết</p>
+      <h2 class="section-title">Vì sao chọn Coolmate?</h2>
+      <p class="section-desc">Thương hiệu thời trang nam Made in Vietnam được yêu thích nhất</p>
+    </div>
+
+```
+<div class="usp-grid">
+  <div class="usp-card fade-in">
+    <span class="usp-icon">🌱</span>
+    <h3 class="usp-title">Chất liệu bền vững</h3>
+    <p class="usp-desc">
+      100% Cotton, Bamboo, Modal cao cấp. Thân thiện môi trường, 
+      thoáng mát, kháng khuẩn tự nhiên.
+    </p>
+  </div>
+
+  <div class="usp-card fade-in">
+    <span class="usp-icon">🔄</span>
+    <h3 class="usp-title">Đổi trả 60 ngày</h3>
+    <p class="usp-desc">
+      Chính sách đổi trả linh hoạt nhất thị trường. 
+      Không cần lý do, không mất phí.
+    </p>
+  </div>
+
+  <div class="usp-card fade-in">
+    <span class="usp-icon">🇻🇳</span>
+    <h3 class="usp-title">Made in Vietnam</h3>
+    <p class="usp-desc">
+      Tự hào sản xuất tại Việt Nam bởi thợ may lành nghề. 
+      Chất lượng quốc tế, giá Việt Nam.
+    </p>
+  </div>
+
+  <div class="usp-card fade-in">
+    <span class="usp-icon">🚚</span>
+    <h3 class="usp-title">Giao hàng toàn quốc</h3>
+    <p class="usp-desc">
+      Freeship đơn từ 30k. Giao nhanh trong 2-3 ngày. 
+      COD toàn quốc.
+    </p>
+  </div>
+</div>
+```
+
+  </section>
+
+  <!-- TESTIMONIALS -->
+
+  <section class="section">
+    <div class="section-header fade-in">
+      <p class="section-label">Khách hàng nói gì</p>
+      <h2 class="section-title">500,000+ khách hàng hài lòng</h2>
+      <p class="section-desc">Review chân thực từ cộng đồng Coolmate</p>
+    </div>
+
+```
+<div class="testimonials-grid">
+  <div class="testimonial-card fade-in">
+    <div class="testimonial-quote">"</div>
+    <p class="testimonial-text">
+      "Mình đã mua 5 chiếc áo polo Coolmate, chất vải mềm mịn lắm, 
+      không bai nhão sau khi giặt. Giá cả hợp lý, chất lượng tốt. 
+      Sẽ ủng hộ dài dài!"
+    </p>
+    <div class="testimonial-author">
+      <div class="author-avatar">A</div>
+      <div class="author-info">
+        <h4>Anh Tuấn Nguyễn</h4>
+        <p>Hà Nội</p>
+        <div class="testimonial-stars">★★★★★</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial-card fade-in">
+    <div class="testimonial-quote">"</div>
+    <p class="testimonial-text">
+      "Đồ lót Bamboo của Coolmate xịn thật sự! Thoáng mát, kháng khuẩn, 
+      mặc cả ngày không khó chịu. Chính sách đổi trả 60 ngày cũng rất ổn."
+    </p>
+    <div class="testimonial-author">
+      <div class="author-avatar">M</div>
+      <div class="author-info">
+        <h4>Minh Hoàng</h4>
+        <p>TP.HCM</p>
+        <div class="testimonial-stars">★★★★★</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial-card fade-in">
+    <div class="testimonial-quote">"</div>
+    <p class="testimonial-text">
+      "Mua áo thể thao để chạy bộ, chất liệu thấm hút mồ hôi tốt, 
+      không bết dính. Ship nhanh, đóng gói cẩn thận. Recommend!"
+    </p>
+    <div class="testimonial-author">
+      <div class="author-avatar">H</div>
+      <div class="author-info">
+        <h4>Hùng Lê</h4>
+        <p>Đà Nẵng</p>
+        <div class="testimonial-stars">★★★★★</div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+  </section>
+
+  <!-- CTA BANNER -->
+
+  <div class="cta-banner fade-in">
+    <h2>Trở thành thành viên Coolmate</h2>
+    <p>Tích điểm đổi quà, nhận ưu đãi độc quyền và tin tức sản phẩm mới nhất</p>
+    <a href="#" class="btn">Đăng ký ngay miễn phí 🎁</a>
+  </div>
+
+  <!-- FOOTER -->
+
+  <footer class="footer" id="contact">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>COOLMATE</h3>
+        <p class="footer-desc">
+          Thương hiệu thời trang nam Made in Vietnam. 
+          Tối giản, bền vững, chất lượng cao với giá hợp lý.
+          Proudly Made in Vietnam 🇻🇳
+        </p>
+        <div class="social-links">
+          <a href="#" class="social-link">f</a>
+          <a href="#" class="social-link">📷</a>
+          <a href="#" class="social-link">▶</a>
+          <a href="#" class="social-link">🛒</a>
+        </div>
+      </div>
+
+```
+  <div class="footer-section">
+    <h3>Sản phẩm</h3>
+    <ul>
+      <li><a href="#">Áo thun</a></li>
+      <li><a href="#">Áo Polo</a></li>
+      <li><a href="#">Quần Short</a></li>
+      <li><a href="#">Đồ Lót</a></li>
+      <li><a href="#">Đồ Thể Thao</a></li>
+      <li><a href="#">Phụ Kiện</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-section">
+    <h3>Hỗ trợ</h3>
+    <ul>
+      <li><a href="#">Chính sách đổi trả</a></li>
+      <li><a href="#">Hướng dẫn mua hàng</a></li>
+      <li><a href="#">Bảng size</a></li>
+      <li><a href="#">Hỏi đáp</a></li>
+      <li><a href="#">Liên hệ</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-section">
+    <h3>Liên hệ</h3>
+    <ul>
+      <li><a href="tel:1900272737">📞 Hotline: 1900 27 27 37</a></li>
+      <li><a href="mailto:hi@coolmate.me">✉️ hi@coolmate.me</a></li>
+      <li><a href="#">🏢 Tòa BMM, Phùng Hưng, Hà Đông, Hà Nội</a></li>
+      <li><a href="#">⏰ 8:00 - 21:00 (Hàng ngày)</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="footer-bottom">
+  <p>&copy; 2024 Coolmate Vietnam. All rights reserved. | Designed by Website 3 Ngày</p>
+</div>
+```
+
+  </footer>
+
+  <!-- JAVASCRIPT -->
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      menuToggle.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+    });
+
+    // Close menu when clicking link
+    const navLinks = navMenu.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        menuToggle.textContent = '☰';
+      });
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const offset = 120;
+          const targetPosition = target.offsetTop - offset;
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Filter tabs
+    const filterTabs = document.querySelectorAll('.filter-tab');
+    filterTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        filterTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+      });
+    });
+
+    // Add to cart animation
+    const addCartBtns = document.querySelectorAll('.btn-add-cart');
+    addCartBtns.forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const originalText = this.textContent;
+        this.textContent = '✓ Đã thêm';
+        this.style.background = '#10B981';
+        
+        // Update cart badge
+        const cartBadge = document.querySelector('.cart-badge');
+        const currentCount = parseInt(cartBadge.textContent);
+        cartBadge.textContent = currentCount + 1;
+        
+        setTimeout(() => {
+          this.textContent = originalText;
+          this.style.background = '';
+        }, 1500);
+      });
+    });
+
+    // Intersection Observer for animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    // Setup animations
+    const fadeElements = document.querySelectorAll('.fade-in');
+    fadeElements.forEach((el, index) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(30px)';
+      el.style.transition = `all 0.8s ease ${index * 0.05}s`;
+      observer.observe(el);
+    });
+
+    // Product card click
+    const productCards = document.querySelectorAll('.product-card');
+    productCards.forEach(card => {
+      card.addEventListener('click', function(e) {
+        if (!e.target.classList.contains('btn-add-cart')) {
+          console.log('View product details');
+        }
+      });
+    });
+
+    // Category card click
+    const categoryCards = document.querySelectorAll('.category-card');
+    categoryCards.forEach(card => {
+      card.addEventListener('click', function() {
+        const categoryName = this.querySelector('.category-name').textContent;
+        console.log('Filter by category:', categoryName);
+      });
+    });
+
+    // Search functionality
+    const searchInput = document.querySelector('.search-box input');
+    searchInput.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        console.log('Search for:', this.value);
+      }
+    });
+  </script>
+
+</body>
+</html>
