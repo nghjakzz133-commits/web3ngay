@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+<head>
+  <base href="/website-3-ngay/">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo Gallery - Website 3 Ngày</title>
+  <meta name="description" content="Khám phá bộ sưu tập demo website đa dạng từ Website 3 Ngày. Profile, Shop, Cafe, Salon, Bar và nhiều ngành nghề khác.">
+
+  <style>
+    /* ================= FONTS ================= */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap');
+
+    /* ================= RESET ================= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #6366F1;
+      --primary-dark: #4F46E5;
+      --secondary: #EC4899;
+      --accent: #14B8A6;
+      --success: #10B981;
+      --warning: #F59E0B;
+      --danger: #EF4444;
+      
+      --text: #0F172A;
+      --text-light: #64748B;
+      --white: #FFFFFF;
+      --bg: #FAFBFC;
+      --bg-dark: #0F172A;
+      --border: rgba(15, 23, 42, 0.1);
+      
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.08);
+      --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.15);
+      
+      --gradient-1: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);
+      --gradient-2: linear-gradient(135deg, #F093FB 0%, #F5576C 100%);
+      --gradient-3: linear-gradient(135deg, #4FACFE 0%, #00F2FE 100%);
+      --gradient-4: linear-gradient(135deg, #43E97B 0%, #38F9D7 100%);
+      --gradient-5: linear-gradient(135deg, #FA709A 0%, #FEE140 100%);
+      --gradient-6: linear-gradient(135deg, #30CFD0 0%, #330867 100%);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ================= HEADER ================= */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      transition: all 0.3s ease;
+    }
+
+    .header.scrolled {
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .nav {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 20px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 900;
+      background: var(--gradient-1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 40px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    /* ================= HERO ================= */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);
+      overflow: hidden;
+      padding-top: 80px;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+      opacity: 0.5;
+    }
+
+    .hero-glow {
+      position: absolute;
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+      border-radius: 50%;
+      filter: blur(100px);
+      animation: float 20s ease-in-out infinite;
+    }
+
+    .glow-1 {
+      top: -300px;
+      left: -300px;
+      animation-delay: 0s;
+    }
+
+    .glow-2 {
+      bottom: -300px;
+      right: -300px;
+      animation-delay: 10s;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: var(--white);
+      max-width: 900px;
+      padding: 0 30px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      padding: 10px 24px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      animation: fadeInDown 0.8s ease;
+    }
+
+    .hero-title {
+      font-size: clamp(48px, 8vw, 80px);
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 24px;
+      letter-spacing: -2px;
+      animation: fadeInUp 0.8s ease 0.2s backwards;
+    }
+
+    .hero-desc {
+      font-size: clamp(18px, 2.5vw, 22px);
+      margin-bottom: 40px;
+      opacity: 0.95;
+      animation: fadeInUp 0.8s ease 0.4s backwards;
+    }
+
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      flex-wrap: wrap;
+      animation: fadeInUp 0.8s ease 0.6s backwards;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 48px;
+      font-weight: 900;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .stat-label {
+      font-size: 14px;
+      opacity: 0.8;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .scroll-indicator {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: var(--white);
+      animation: bounce 2s infinite;
+      cursor: pointer;
+    }
+
+    .scroll-indicator span {
+      display: block;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .scroll-indicator::after {
+      content: '↓';
+      display: block;
+      font-size: 24px;
+    }
+
+    /* ================= SECTION ================= */
+    .section {
+      padding: 100px 30px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .section-label {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--primary);
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-size: clamp(36px, 5vw, 56px);
+      font-weight: 900;
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+    }
+
+    .section-desc {
+      font-size: 18px;
+      color: var(--text-light);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* ================= DEMO GRID ================= */
+    .demo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      gap: 40px;
+    }
+
+    .demo-card {
+      background: var(--white);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+      position: relative;
+      animation: fadeInUp 0.6s ease backwards;
+    }
+
+    .demo-card:nth-child(1) { animation-delay: 0.1s; }
+    .demo-card:nth-child(2) { animation-delay: 0.2s; }
+    .demo-card:nth-child(3) { animation-delay: 0.3s; }
+    .demo-card:nth-child(4) { animation-delay: 0.4s; }
+    .demo-card:nth-child(5) { animation-delay: 0.5s; }
+    .demo-card:nth-child(6) { animation-delay: 0.6s; }
+    .demo-card:nth-child(7) { animation-delay: 0.7s; }
+    .demo-card:nth-child(8) { animation-delay: 0.8s; }
+    .demo-card:nth-child(9) { animation-delay: 0.9s; }
+    .demo-card:nth-child(10) { animation-delay: 1s; }
+
+    .demo-card:hover {
+      transform: translateY(-12px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .demo-image {
+      height: 240px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 80px;
+    }
+
+    .demo-image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.4) 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .demo-card:hover .demo-image::after {
+      opacity: 1;
+    }
+
+    .demo-badge {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      background: var(--white);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      z-index: 2;
+      box-shadow: var(--shadow-md);
+    }
+
+    .demo-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 3;
+    }
+
+    .demo-card:hover .demo-overlay {
+      opacity: 1;
+    }
+
+    .demo-actions {
+      display: flex;
+      gap: 12px;
+    }
+
+    .btn-view {
+      background: var(--white);
+      color: var(--text);
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-view:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+    }
+
+    .demo-info {
+      padding: 28px;
+    }
+
+    .demo-category {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+      padding: 6px 12px;
+      border-radius: 20px;
+    }
+
+    .demo-title {
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    .demo-desc {
+      font-size: 14px;
+      color: var(--text-light);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .demo-meta {
+      display: flex;
+      gap: 24px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--text-light);
+    }
+
+    .meta-icon {
+      font-size: 16px;
+    }
+
+    /* Color variants */
+    .demo-card:nth-child(1) .demo-image { background: var(--gradient-1); }
+    .demo-card:nth-child(2) .demo-image { background: var(--gradient-2); }
+    .demo-card:nth-child(3) .demo-image { background: var(--gradient-3); }
+    .demo-card:nth-child(4) .demo-image { background: var(--gradient-4); }
+    .demo-card:nth-child(5) .demo-image { background: var(--gradient-5); }
+    .demo-card:nth-child(6) .demo-image { background: var(--gradient-6); }
+    .demo-card:nth-child(7) .demo-image { background: var(--gradient-1); }
+    .demo-card:nth-child(8) .demo-image { background: var(--gradient-2); }
+    .demo-card:nth-child(9) .demo-image { background: var(--gradient-3); }
+    .demo-card:nth-child(10) .demo-image { background: var(--gradient-4); }
+
+    .cat-profile { background: #EEF2FF; color: var(--primary); }
+    .cat-shop { background: #FEF2F2; color: var(--danger); }
+    .cat-cafe { background: #FEF3C7; color: var(--warning); }
+    .cat-salon { background: #FCE7F3; color: var(--secondary); }
+    .cat-bar { background: #F0FDFA; color: var(--accent); }
+    .cat-company { background: #EFF6FF; color: #3B82F6; }
+    .cat-course { background: #F5F3FF; color: #8B5CF6; }
+    .cat-nail { background: #FFF1F2; color: #F43F5E; }
+    .cat-real-estate { background: #ECFDF5; color: #059669; }
+    .cat-spa { background: #FEF2F2; color: #DC2626; }
+
+    /* ================= CTA ================= */
+    .cta {
+      background: var(--bg-dark);
+      color: var(--white);
+      padding: 100px 30px;
+      text-align: center;
+      margin-top: 80px;
+    }
+
+    .cta-content {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .cta h2 {
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 900;
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+    }
+
+    .cta p {
+      font-size: 18px;
+      margin-bottom: 40px;
+      opacity: 0.9;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 16px 36px;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 16px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: var(--white);
+      border: 2px solid var(--primary);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid var(--white);
+    }
+
+    .btn-outline:hover {
+      background: var(--white);
+      color: var(--bg-dark);
+    }
+
+    /* ================= FOOTER ================= */
+    .footer {
+      background: var(--text);
+      color: var(--white);
+      padding: 60px 30px 30px;
+    }
+
+    .footer-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-section h3 {
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .footer-section ul {
+      list-style: none;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 12px;
+    }
+
+    .footer-section ul li a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.3s ease;
+    }
+
+    .footer-section ul li a:hover {
+      color: var(--white);
+    }
+
+    .footer-desc {
+      font-size: 14px;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 20px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 12px;
+    }
+
+    .social-link {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .social-link:hover {
+      background: var(--primary);
+      transform: translateY(-3px);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 30px;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 14px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    /* ================= ANIMATIONS ================= */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translate(0, 0);
+      }
+      25% {
+        transform: translate(30px, 30px);
+      }
+      50% {
+        transform: translate(-20px, 50px);
+      }
+      75% {
+        transform: translate(-40px, -20px);
+      }
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translate(-50%, 0);
+      }
+      50% {
+        transform: translate(-50%, -15px);
+      }
+    }
+
+    /* ================= RESPONSIVE ================= */
+    @media (max-width: 768px) {
+      .nav-links {
+        position: fixed;
+        top: 81px;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        padding: 30px;
+        gap: 20px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        box-shadow: var(--shadow-md);
+      }
+
+      .nav-links.active {
+        transform: translateX(0);
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .demo-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .hero-stats {
+        gap: 40px;
+      }
+
+      .section {
+        padding: 60px 20px;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+      }
+    }
+  </style>
+
+</head>
+<body>
+
+  <!-- HEADER -->
+
+  <header class="header" id="header">
+  <nav class="nav container">
+
+    <div class="logo">
+      <a href="../index.html">DEMOS</a>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html">Trang chủ</a></li>
+      <li><a href="../demos/index.html">Demo</a></li>
+      <li><a href="../pricing/index.html">Bảng giá</a></li>
+      <li><a href="../process/index.html">Quy trình</a></li>
+      <li><a href="../about/index.html">Giới thiệu</a></li>
+      <li><a href="../contact/index.html">Liên hệ</a></li>
+    </ul>
+
+    <button class="menu-toggle" id="menuToggle">☰</button>
+
+  </nav>
+</header>
+
+  <!-- HERO -->
+
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-glow glow-1"></div>
+    <div class="hero-glow glow-2"></div>
+
+```
+<div class="hero-content">
+  <span class="hero-badge">✨ Bộ sưu tập Demo Website</span>
+  <h1 class="hero-title">Khám phá 10+ Demo<br>Đa dạng ngành nghề</h1>
+  <p class="hero-desc">
+    Từ Profile cá nhân, Shop bán hàng, đến Cafe, Salon, Bar và nhiều lĩnh vực khác.
+    Mỗi demo được thiết kế chuyên biệt, tối ưu trải nghiệm người dùng.
+  </p>
+
+  <div class="hero-stats">
+    <div class="stat-item">
+      <span class="stat-number">10+</span>
+      <span class="stat-label">Demo Projects</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">100%</span>
+      <span class="stat-label">Responsive</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">3-7</span>
+      <span class="stat-label">Ngày hoàn thành</span>
+    </div>
+  </div>
+</div>
+
+<div class="scroll-indicator" onclick="document.getElementById('demos').scrollIntoView({behavior: 'smooth'})">
+  <span>Scroll Down</span>
+</div>
+```
+
+  </section>
+
+  <!-- DEMO GRID -->
+
+  <section class="section" id="demos">
+    <div class="section-header">
+      <p class="section-label">Demo Gallery</p>
+      <h2 class="section-title">Bộ sưu tập Demo đa dạng</h2>
+      <p class="section-desc">
+        Mỗi demo là một tác phẩm được chăm chút kỹ lưỡng, phù hợp với từng ngành nghề cụ thể
+      </p>
+    </div>
+
+```
+<div class="demo-grid">
+  
+  <!-- PROFILE -->
+  <div class="demo-card">
+  <div class="demo-image">
+    🎤
+    <span class="demo-badge">Hot</span>
+    <div class="demo-overlay">
+      <div class="demo-actions">
+        <a href="../demos/profile/index.html" class="btn-view">
+          👁️ Xem Demo
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="demo-info">
+    <span class="demo-category cat-profile">Profile / Artist</span>
+    <h3 class="demo-title">Artist Profile</h3>
+    <p class="demo-desc">
+      Profile chuyên nghiệp cho ca sĩ, DJ, nghệ sĩ. Thiết kế tối giản,
+      đậm chất cá nhân với sections: Bio, Discography, Achievements, Gallery.
+    </p>
+
+    <div class="demo-meta">
+      <div class="meta-item">
+        <span class="meta-icon">⚡</span>
+        <span>Single Page</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-icon">🎨</span>
+        <span>Dark Theme</span>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- SHOP -->
+<!-- SHOP -->
+<div class="demo-card">
+  <div class="demo-image">
+    🛍️
+    <span class="demo-badge">Best Seller</span>
+    <div class="demo-overlay">
+      <div class="demo-actions">
+        <a href="./shop/index.html" class="btn-view">👁️ Xem Demo</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="demo-info">
+    <span class="demo-category cat-shop">E-commerce / Shop</span>
+    <h3 class="demo-title">Fashion Shop</h3>
+    <p class="demo-desc">
+      Website bán hàng thời trang với đầy đủ tính năng: Product grid,
+      Filter, Add to cart, Search. Tối ưu cho chuyển đổi và bán hàng.
+    </p>
+
+    <div class="demo-meta">
+      <div class="meta-item"><span>🛒</span><span>Cart System</span></div>
+      <div class="meta-item"><span>📱</span><span>Mobile First</span></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- CAFE -->
+<div class="demo-card">
+  <div class="demo-image">
+    ☕
+    <div class="demo-overlay">
+      <div class="demo-actions">
+        <a href="./cafe/index.html" class="btn-view">👁️ Xem Demo</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="demo-info">
+    <span class="demo-category cat-cafe">F&B / Cafe</span>
+    <h3 class="demo-title">The Coffee House</h3>
+    <p class="demo-desc">
+      Website quán cafe ấm cúng với menu đa dạng, đặt hàng online,
+      tích hợp map. Thiết kế warm tone, tạo cảm giác thân thiện.
+    </p>
+
+    <div class="demo-meta">
+      <div class="meta-item"><span>🍽️</span><span>Menu System</span></div>
+      <div class="meta-item"><span>🗺️</span><span>Store Locator</span></div>
+    </div>
+  </div>
+</div>
+
+  <!-- SALON -->
+  <!-- SALON -->
+<div class="demo-card">
+  <div class="demo-image">
+    💇
+    <span class="demo-badge">Mới</span>
+    <div class="demo-overlay">
+      <div class="demo-actions">
+        <a href="./salon/index.html" class="btn-view" target="_blank">👁️ Xem Demo</a>
+      </div>
+    </div>
+  </div>
+  <div class="demo-info">
+    <span class="demo-category cat-salon">Beauty / Salon</span>
+    <h3 class="demo-title">Beauty Salon</h3>
+    <p class="demo-desc">
+      Website tiệm làm tóc sang trọng với gallery ảnh đẹp,
+      bảng giá dịch vụ, đặt lịch online. Thiết kế feminine, tinh tế.
+    </p>
+    <div class="demo-meta">
+      <div class="meta-item"><span>📅</span><span>Booking Form</span></div>
+      <div class="meta-item"><span>📸</span><span>Gallery</span></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- BAR -->
+<div class="demo-card">
+  <div class="demo-image">
+    🍸
+    <div class="demo-overlay">
+      <div class="demo-actions">
+        <a href="./bar/index.html" class="btn-view" target="_blank">👁️ Xem Demo</a>
+      </div>
+    </div>
+  </div>
+  <div class="demo-info">
+    <span class="demo-category cat-bar">F&B / Bar</span>
+    <h3 class="demo-title">Cocktail Bar</h3>
+    <p class="demo-desc">
+      Website bar/pub phong cách hiện đại với menu cocktail,
+      events, music playlist. Thiết kế tối màu, đậm chất nightlife.
+    </p>
+    <div class="demo-meta">
+      <div class="meta-item"><span>🎵</span><span>Events</span></div>
+      <div class="meta-item"><span>🌙</span><span>Dark Mode</span></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- COMPANY -->
+<div class="demo-card">
+  <div class="demo-image">
+    🏢
+    <div class="demo-overlay">
+      <div class="demo-actions">
+        <a href="./company/index.html" class="btn-view" target="_blank">👁️ Xem Demo</a>
+      </div>
+    </div>
+  </div>
+  <div class="demo-info">
+    <span class="demo-category cat-company">Corporate / Company</span>
+    <h3 class="demo-title">Tech Company</h3>
+    <p class="demo-desc">
+      Website doanh nghiệp chuyên nghiệp với: About, Services,
+      Team, Portfolio, Contact. Thiết kế corporate, đáng tin cậy.
+    </p>
+    <div class="demo-meta">
+      <div class="meta-item"><span>👥</span><span>Team Section</span></div>
+      <div class="meta-item"><span>💼</span><span>Professional</span></div>
+    </div>
+  </div>
+</div>
+  <!-- COURSE -->
+ <!-- COURSE -->
+<div class="demo-card">
+  <div class="demo-image">
+    📚
+    <div class="demo-overlay">
+      <div class="demo-actions">
+        <a href="./course/index.html" class="btn-view" target="_blank">👁️ Xem Demo</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="demo-info">
+    <span class="demo-category cat-course">Education / Course</span>
+    <h3 class="demo-title">Online Course</h3>
+    <p class="demo-desc">
+      Website khóa học trực tuyến với curriculum, instructor info,
+      pricing, testimonials. Tối ưu cho landing page bán khóa học.
+    </p>
+
+    <div class="demo-meta">
+      <div class="meta-item"><span>🎓</span><span>Course Grid</span></div>
+      <div class="meta-item"><span>⭐</span><span>Reviews</span></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- NAIL -->
+<div class="demo-card">
+  <div class="demo-image">
+    💅
+    <div class="demo-overlay">
+      <div class="demo-actions">
+        <a href="./nail/index.html" class="btn-view" target="_blank">👁️ Xem Demo</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="demo-info">
+    <span class="demo-category cat-nail">Beauty / Nail</span>
+    <h3 class="demo-title">Nail Salon</h3>
+    <p class="demo-desc">
+      Website tiệm nail với gallery mẫu móng đẹp, bảng giá,
+      đặt lịch. Thiết kế trendy, màu sắc pastel dịu mắt.
+    </p>
+
+    <div class="demo-meta">
+      <div class="meta-item"><span>✨</span><span>Style Gallery</span></div>
+      <div class="meta-item"><span>💰</span><span>Pricing Table</span></div>
+    </div>
+  </div>
+</div>
+  <!-- REAL ESTATE -->
+ <!-- REAL ESTATE -->
+<div class="demo-card">
+  <div class="demo-image">
+    🏠
+    <div class="demo-overlay">
+      <div class="demo-actions">
+        <a href="./real-estate/index.html" class="btn-view" target="_blank">👁️ Xem Demo</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="demo-info">
+    <span class="demo-category cat-real-estate">Real Estate / Property</span>
+    <h3 class="demo-title">Real Estate Agency</h3>
+    <p class="demo-desc">
+      Website bất động sản với property listings, filter search,
+      agent profile, virtual tour. Thiết kế high-end, luxury.
+    </p>
+
+    <div class="demo-meta">
+      <div class="meta-item"><span>🔍</span><span>Search Filter</span></div>
+      <div class="meta-item"><span>🏘️</span><span>Listings</span></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- SPA -->
+<div class="demo-card">
+  <div class="demo-image">
+    🧖
+    <div class="demo-overlay">
+      <div class="demo-actions">
+        <a href="./spa/index.html" class="btn-view" target="_blank">👁️ Xem Demo</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="demo-info">
+    <span class="demo-category cat-spa">Wellness / Spa</span>
+    <h3 class="demo-title">Luxury Spa</h3>
+    <p class="demo-desc">
+      Website spa thư giãn với services menu, packages,
+      therapist profiles, online booking. Thiết kế zen, peaceful.
+    </p>
+
+    <div class="demo-meta">
+      <div class="meta-item"><span>🌸</span><span>Services</span></div>
+      <div class="meta-item"><span>🎁</span><span>Packages</span></div>
+    </div>
+  </div>
+</div>
+```
+
+  </section>
+
+  <!-- CTA -->
+
+  <section class="cta" id="about">
+  <div class="cta-content">
+    <h2>Bạn cần website cho ngành nghề của mình?</h2>
+    <p>
+      Chúng tôi thiết kế website chuyên biệt cho từng lĩnh vực. 
+      Từ demo đến website thật chỉ 3-7 ngày. Cam kết chất lượng, giá cả hợp lý.
+    </p>
+
+    <div class="cta-buttons">
+      <a href="https://zalo.me/0373453757" 
+         class="btn btn-primary" 
+         target="_blank">
+         💬 Tư vấn miễn phí
+      </a>
+
+      <a href="../pricing/index.html" 
+         class="btn btn-outline">
+         📋 Xem bảng giá
+      </a>
+    </div>
+  </div>
+</section>
+  <!-- FOOTER -->
+
+  <footer class="footer" id="contact">
+  <div class="footer-content">
+
+    <div class="footer-section">
+      <h3>Website 3 Ngày</h3>
+      <p class="footer-desc">
+        Thiết kế website chuyên nghiệp, hoàn thiện trong 3-7 ngày. 
+        Đa dạng ngành nghề, giá cả hợp lý, chất lượng đảm bảo.
+      </p>
+
+      <div class="social-links">
+        <a href="#" class="social-link">f</a>
+        <a href="#" class="social-link">📷</a>
+        <a href="#" class="social-link">▶</a>
+        <a href="https://zalo.me/0373453757" target="_blank" class="social-link">💬</a>
+      </div>
+    </div>
+
+
+    <div class="footer-section">
+      <h3>Demo</h3>
+      <ul>
+        <li><a href="../demos/profile/index.html">Profile / Artist</a></li>
+        <li><a href="../demos/shop/index.html">E-commerce / Shop</a></li>
+        <li><a href="../demos/cafe/index.html">F&B / Cafe</a></li>
+        <li><a href="../demos/salon/index.html">Beauty / Salon</a></li>
+        <li><a href="../demos/company/index.html">Corporate</a></li>
+      </ul>
+    </div>
+
+
+    <div class="footer-section">
+      <h3>Dịch vụ</h3>
+      <ul>
+        <li><a href="../pricing/index.html">Thiết kế Website</a></li>
+        <li><a href="../pricing/index.html">Landing Page</a></li>
+        <li><a href="../pricing/index.html">E-commerce</a></li>
+        <li><a href="../pricing/index.html">Bảo trì Website</a></li>
+        <li><a href="../pricing/index.html">SEO Marketing</a></li>
+      </ul>
+    </div>
+
+
+    <div class="footer-section">
+      <h3>Liên hệ</h3>
+      <ul>
+        <li><a href="tel:0373453757">📞 0373 453 757</a></li>
+        <li><a href="mailto:nghjakzz133@gmail.com">✉️ nghjakzz133@gmail.com</a></li>
+        <li><a href="#">📍 51 Bùi Thị Xuân, Phạm Ngũ Lão, Q1, TP.HCM</a></li>
+        <li><a href="#">⏰ Mở cửa 24/7</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 Website 3 Ngày. All rights reserved.</p>
+  </div>
+</footer>
+
+  <!-- JAVASCRIPT -->
+
+  <script>
+    // Header scroll effect
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile menu
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      menuToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+    });
+
+    // Close menu when clicking link
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        menuToggle.textContent = '☰';
+      });
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Demo card interactions
+    const demoCards = document.querySelectorAll('.demo-card');
+    demoCards.forEach(card => {
+      card.addEventListener('click', function(e) {
+        if (!e.target.closest('.btn-view')) {
+          const title = this.querySelector('.demo-title').textContent;
+          console.log('Clicked on:', title);
+        }
+      });
+    });
+
+    // Parallax effect for hero glows
+    if (window.innerWidth > 768) {
+      document.addEventListener('mousemove', (e) => {
+        const glows = document.querySelectorAll('.hero-glow');
+        const x = e.clientX / window.innerWidth;
+        const y = e.clientY / window.innerHeight;
+        
+        glows.forEach((glow, index) => {
+          const speed = (index + 1) * 30;
+          const xOffset = (x - 0.5) * speed;
+          const yOffset = (y - 0.5) * speed;
+          glow.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
+        });
+      });
+    }
+
+    // Stats counter animation
+    const animateCounter = (element, target) => {
+      let current = 0;
+      const increment = target / 50;
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          element.textContent = target + (target < 100 ? '+' : '');
+          clearInterval(timer);
+        } else {
+          element.textContent = Math.floor(current) + (target < 100 ? '+' : '');
+        }
+      }, 30);
+    };
+
+    // Trigger counter when hero is visible
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const statNumbers = entry.target.querySelectorAll('.stat-number');
+          statNumbers.forEach(stat => {
+            const text = stat.textContent;
+            const number = parseInt(text.replace(/[^0-9]/g, ''));
+            animateCounter(stat, number);
+          });
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    const heroStats = document.querySelector('.hero-stats');
+    if (heroStats) {
+      observer.observe(heroStats);
+    }
+  </script>
+
+</body>
+</html>
