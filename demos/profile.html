@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sơn Tùng M-TP - Official Artist Profile</title>
+  <meta name="description" content="Sơn Tùng M-TP - Ca sĩ, nhạc sĩ, diễn viên hàng đầu Việt Nam. Khám phá âm nhạc, sự nghiệp và thông tin mới nhất.">
+  
+  <style>
+    /* ================= RESET & BASE ================= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #1a1a1a;
+      --accent: #ff0055;
+      --text: #ffffff;
+      --text-muted: #a0a0a0;
+      --bg-dark: #0a0a0a;
+      --bg-darker: #000000;
+      --border: rgba(255, 255, 255, 0.1);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg-darker);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ================= HEADER ================= */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(10, 10, 10, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      transition: all 0.3s ease;
+    }
+
+    .header.scrolled {
+      background: rgba(0, 0, 0, 0.98);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .nav {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -1px;
+      color: var(--text);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-accent {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 40px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 15px;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    /* ================= HERO ================= */
+    .hero {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a0010 100%);
+    }
+
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.02)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+      opacity: 0.5;
+    }
+
+    .hero-glow {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(255, 0, 85, 0.2) 0%, transparent 70%);
+      border-radius: 50%;
+      filter: blur(80px);
+      animation: float 8s ease-in-out infinite;
+    }
+
+    .glow-1 {
+      top: -200px;
+      left: -200px;
+    }
+
+    .glow-2 {
+      bottom: -200px;
+      right: -200px;
+      animation-delay: 4s;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 1000px;
+      padding: 0 40px;
+    }
+
+    .hero-label {
+      font-size: 14px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .hero-title {
+      font-size: clamp(48px, 8vw, 96px);
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 24px;
+      letter-spacing: -2px;
+      background: linear-gradient(135deg, #ffffff 0%, #888888 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(18px, 2vw, 24px);
+      color: var(--text-muted);
+      margin-bottom: 40px;
+      font-weight: 300;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 16px 36px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 16px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--text);
+      border: 2px solid var(--accent);
+    }
+
+    .btn-primary:hover {
+      background: transparent;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(255, 0, 85, 0.3);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--text);
+      border: 2px solid var(--text);
+    }
+
+    .btn-outline:hover {
+      background: var(--text);
+      color: var(--bg-darker);
+      transform: translateY(-2px);
+    }
+
+    .scroll-indicator {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: var(--text-muted);
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      animation: bounce 2s infinite;
+    }
+
+    .scroll-indicator::after {
+      content: '↓';
+      font-size: 20px;
+    }
+
+    /* ================= SECTION ================= */
+    .section {
+      padding: 100px 40px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .section-label {
+      font-size: 14px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
+
+    .section-title {
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 800;
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+    }
+
+    .section-desc {
+      font-size: 18px;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* ================= STATS ================= */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-top: 60px;
+    }
+
+    .stat-card {
+      text-align: center;
+      padding: 40px 20px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .stat-card:hover {
+      background: rgba(255, 255, 255, 0.05);
+      transform: translateY(-5px);
+      border-color: var(--accent);
+    }
+
+    .stat-number {
+      font-size: 48px;
+      font-weight: 900;
+      color: var(--accent);
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 16px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* ================= BIO ================= */
+    .bio-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .bio-image {
+      width: 100%;
+      aspect-ratio: 3/4;
+      background: linear-gradient(135deg, rgba(255, 0, 85, 0.2) 0%, rgba(0, 0, 0, 0.8) 100%);
+      border-radius: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bio-image::after {
+      content: 'SƠN TÙNG M-TP';
+      position: absolute;
+      bottom: 40px;
+      left: 40px;
+      font-size: 72px;
+      font-weight: 900;
+      color: rgba(255, 255, 255, 0.1);
+      line-height: 1;
+    }
+
+    .bio-content h3 {
+      font-size: 32px;
+      margin-bottom: 24px;
+      font-weight: 800;
+    }
+
+    .bio-content p {
+      font-size: 16px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      line-height: 1.8;
+    }
+
+    .bio-list {
+      list-style: none;
+      margin-top: 30px;
+    }
+
+    .bio-list li {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      font-size: 15px;
+    }
+
+    .bio-list li strong {
+      color: var(--text);
+    }
+
+    .bio-list li span {
+      color: var(--text-muted);
+    }
+
+    /* ================= DISCOGRAPHY ================= */
+    .disco-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .disco-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 30px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .disco-card:hover {
+      background: rgba(255, 255, 255, 0.05);
+      transform: translateY(-5px);
+      border-color: var(--accent);
+    }
+
+    .disco-year {
+      font-size: 14px;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .disco-title {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    .disco-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ================= ACHIEVEMENTS ================= */
+    .achievements-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .achievement-card {
+      background: linear-gradient(135deg, rgba(255, 0, 85, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 40px 30px;
+      text-align: center;
+    }
+
+    .achievement-icon {
+      font-size: 48px;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .achievement-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    .achievement-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ================= GALLERY ================= */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-item {
+      aspect-ratio: 1;
+      background: linear-gradient(135deg, rgba(255, 0, 85, 0.2) 0%, rgba(0, 0, 0, 0.8) 100%);
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+    }
+
+    .gallery-item::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+    }
+
+    /* ================= SOCIAL ================= */
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 60px;
+    }
+
+    .social-link {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: var(--text);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .social-link:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      transform: translateY(-5px);
+    }
+
+    /* ================= FOOTER ================= */
+    .footer {
+      background: var(--bg-dark);
+      padding: 60px 40px 40px;
+      text-align: center;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-content {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .footer-logo {
+      font-size: 32px;
+      font-weight: 900;
+      margin-bottom: 20px;
+      color: var(--text);
+    }
+
+    .footer-text {
+      color: var(--text-muted);
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+
+    .footer-bottom {
+      padding-top: 30px;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    /* ================= ANIMATIONS ================= */
+    @keyframes float {
+      0%, 100% {
+        transform: translate(0, 0);
+      }
+      50% {
+        transform: translate(30px, 30px);
+      }
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translate(-50%, 0);
+      }
+      50% {
+        transform: translate(-50%, -10px);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in-up {
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    /* ================= RESPONSIVE ================= */
+    @media (max-width: 768px) {
+      .nav {
+        padding: 16px 20px;
+      }
+
+      .nav-links {
+        position: fixed;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.98);
+        flex-direction: column;
+        gap: 0;
+        padding: 20px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        border-top: 1px solid var(--border);
+      }
+
+      .nav-links.active {
+        transform: translateX(0);
+      }
+
+      .nav-links a {
+        padding: 15px 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .section {
+        padding: 60px 20px;
+      }
+
+      .bio-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .hero-cta {
+        flex-direction: column;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <nav class="nav">
+      <a href="#" class="logo">
+        M-TP <span class="logo-accent">●</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">Giới thiệu</a></li>
+        <li><a href="#music">Âm nhạc</a></li>
+        <li><a href="#achievements">Thành tựu</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Liên hệ</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-glow glow-1"></div>
+    <div class="hero-glow glow-2"></div>
+    
+    <div class="hero-content fade-in-up">
+      <p class="hero-label">Vietnamese Artist</p>
+      <h1 class="hero-title">SƠN TÙNG M-TP</h1>
+      <p class="hero-subtitle">Singer · Songwriter · Actor · Entrepreneur</p>
+      <div class="hero-cta">
+        <a href="#music" class="btn btn-primary">Khám phá âm nhạc</a>
+        <a href="#contact" class="btn btn-outline">Liên hệ</a>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">Scroll Down</div>
+  </section>
+
+  <!-- STATS -->
+  <section class="section">
+    <div class="stats-grid">
+      <div class="stat-card fade-in-up">
+        <span class="stat-number">11M+</span>
+        <span class="stat-label">YouTube Subscribers</span>
+      </div>
+      <div class="stat-card fade-in-up">
+        <span class="stat-number">9M+</span>
+        <span class="stat-label">Instagram Followers</span>
+      </div>
+      <div class="stat-card fade-in-up">
+        <span class="stat-number">150+</span>
+        <span class="stat-label">Hit Songs</span>
+      </div>
+      <div class="stat-card fade-in-up">
+        <span class="stat-number">10+</span>
+        <span class="stat-label">Years Active</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- BIO -->
+  <section class="section" id="about">
+    <div class="section-header fade-in-up">
+      <p class="section-label">Về tôi</p>
+      <h2 class="section-title">Biography</h2>
+      <p class="section-desc">Hành trình từ một chàng trai Thái Bình đến ngôi sao hàng đầu V-Pop</p>
+    </div>
+
+    <div class="bio-grid">
+      <div class="bio-image fade-in-up"></div>
+      <div class="bio-content fade-in-up">
+        <h3>Nguyễn Thanh Tùng</h3>
+        <p>
+          Sơn Tùng M-TP (tên thật: Nguyễn Thanh Tùng) sinh ngày 5 tháng 7 năm 1994 tại Thái Bình, là một trong những nghệ sĩ có ảnh hưởng nhất trong làng nhạc Việt Nam.
+        </p>
+        <p>
+          Bắt đầu sự nghiệp từ năm 2012, Sơn Tùng nhanh chóng trở thành hiện tượng với những ca khúc đình đám như "Cơn mưa ngang qua" (2012), "Em của ngày hôm qua" (2013), và đặc biệt là "Lạc trôi" (2017) - một trong những MV Việt đầu tiên đạt 100 triệu views.
+        </p>
+        <p>
+          Năm 2019, anh hợp tác với rapper huyền thoại Snoop Dogg trong ca khúc "Hãy trao cho anh" (Give It To Me), đánh dấu bước tiến quan trọng trong việc đưa V-Pop ra thế giới. Hiện tại, Sơn Tùng là Friend of House của Gucci tại Việt Nam và sở hữu công ty giải trí riêng M-TP Entertainment.
+        </p>
+
+        <ul class="bio-list">
+          <li><strong>Họ tên</strong> <span>Nguyễn Thanh Tùng</span></li>
+          <li><strong>Nghệ danh</strong> <span>Sơn Tùng M-TP</span></li>
+          <li><strong>Sinh nhật</strong> <span>05/07/1994</span></li>
+          <li><strong>Quê quán</strong> <span>Thái Bình, Việt Nam</span></li>
+          <li><strong>Công ty</strong> <span>M-TP Entertainment</span></li>
+          <li><strong>Thể loại</strong> <span>Pop, R&B, EDM</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- DISCOGRAPHY -->
+  <section class="section" id="music">
+    <div class="section-header fade-in-up">
+      <p class="section-label">Âm nhạc</p>
+      <h2 class="section-title">Hit Songs & Albums</h2>
+      <p class="section-desc">Những ca khúc và album đánh dấu sự nghiệp</p>
+    </div>
+
+    <div class="disco-grid">
+      <div class="disco-card fade-in-up">
+        <p class="disco-year">2012</p>
+        <h3 class="disco-title">Cơn mưa ngang qua</h3>
+        <p class="disco-desc">Ca khúc debut đánh dấu sự xuất hiện của Sơn Tùng, đạt giải Song of the Month tháng 10/2012.</p>
+      </div>
+
+      <div class="disco-card fade-in-up">
+        <p class="disco-year">2013</p>
+        <h3 class="disco-title">Em của ngày hôm qua</h3>
+        <p class="disco-desc">Siêu phẩm giúp tên tuổi Sơn Tùng vươn tầm quốc gia, đạt 100 triệu lượt nghe chỉ sau 3 tháng.</p>
+      </div>
+
+      <div class="disco-card fade-in-up">
+        <p class="disco-year">2017</p>
+        <h3 class="disco-title">Lạc trôi</h3>
+        <p class="disco-desc">MV đạt 100 triệu views, kết hợp hoàn hảo giữa âm nhạc hiện đại và nhạc cụ truyền thống Việt Nam.</p>
+      </div>
+
+      <div class="disco-card fade-in-up">
+        <p class="disco-year">2017</p>
+        <h3 class="disco-title">Album: m-tp M-TP</h3>
+        <p class="disco-desc">Album tuyển tập đầu tiên với những bản hit như "Nơi này có anh", khẳng định đẳng cấp nghệ sĩ.</p>
+      </div>
+
+      <div class="disco-card fade-in-up">
+        <p class="disco-year">2018</p>
+        <h3 class="disco-title">Chạy ngay đi</h3>
+        <p class="disco-desc">Ca khúc EDM sôi động với hơn 200 triệu views, tạo nên cơn sốt trên khắp châu Á.</p>
+      </div>
+
+      <div class="disco-card fade-in-up">
+        <p class="disco-year">2019</p>
+        <h3 class="disco-title">Hãy trao cho anh ft. Snoop Dogg</h3>
+        <p class="disco-desc">Hợp tác quốc tế đầu tiên với rapper huyền thoại, đưa V-Pop lên bản đồ âm nhạc thế giới.</p>
+      </div>
+
+      <div class="disco-card fade-in-up">
+        <p class="disco-year">2021</p>
+        <h3 class="disco-title">Muộn rồi mà sao còn</h3>
+        <p class="disco-desc">Lọt Billboard Global Excl. US, là bài hát tiếng Việt đầu tiên đạt thành tích này.</p>
+      </div>
+
+      <div class="disco-card fade-in-up">
+        <p class="disco-year">2024</p>
+        <h3 class="disco-title">Đừng làm trái tim anh đau</h3>
+        <p class="disco-desc">Single mới nhất tiếp tục lập kỷ lục trên Billboard Global, khẳng định vị thế số 1 V-Pop.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section class="section" id="achievements">
+    <div class="section-header fade-in-up">
+      <p class="section-label">Thành tựu</p>
+      <h2 class="section-title">Awards & Recognition</h2>
+      <p class="section-desc">Những cột mốc và giải thưởng đáng tự hào</p>
+    </div>
+
+    <div class="achievements-grid">
+      <div class="achievement-card fade-in-up">
+        <span class="achievement-icon">🏆</span>
+        <h3 class="achievement-title">MTV EMA 2015</h3>
+        <p class="achievement-desc">Best Southeast Asia Act - Nghệ sĩ Đông Nam Á xuất sắc nhất tại giải thưởng âm nhạc châu Âu.</p>
+      </div>
+
+      <div class="achievement-card fade-in-up">
+        <span class="achievement-icon">🎬</span>
+        <h3 class="achievement-title">Sky Tour Movie</h3>
+        <p class="achievement-desc">Phim tài liệu đầu tiên của Việt Nam được phát hành trên Netflix toàn cầu (2020).</p>
+      </div>
+
+      <div class="achievement-card fade-in-up">
+        <span class="achievement-icon">📊</span>
+        <h3 class="achievement-title">Billboard Global</h3>
+        <p class="achievement-desc">2 ca khúc tiếng Việt duy nhất lọt bảng xếp hạng Billboard Global Excl. US (2021, 2024).</p>
+      </div>
+
+      <div class="achievement-card fade-in-up">
+        <span class="achievement-icon">👔</span>
+        <h3 class="achievement-title">Gucci Friend of House</h3>
+        <p class="achievement-desc">Nghệ sĩ Việt Nam đầu tiên được Gucci chọn làm gương mặt đồng hành độc quyền (2023).</p>
+      </div>
+
+      <div class="achievement-card fade-in-up">
+        <span class="achievement-icon">🏢</span>
+        <h3 class="achievement-title">M-TP Entertainment</h3>
+        <p class="achievement-desc">Thành lập công ty giải trí riêng, đào tạo và phát triển tài năng trẻ Việt Nam.</p>
+      </div>
+
+      <div class="achievement-card fade-in-up">
+        <span class="achievement-icon">❤️</span>
+        <h3 class="achievement-title">Dreams in the Sky</h3>
+        <p class="achievement-desc">Dự án xã hội và khuyến học quy mô lớn, xây trường và hỗ trợ giáo dục vùng khó khăn.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section" id="gallery">
+    <div class="section-header fade-in-up">
+      <p class="section-label">Hình ảnh</p>
+      <h2 class="section-title">Gallery</h2>
+      <p class="section-desc">Những khoảnh khắc đáng nhớ trong sự nghiệp</p>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item fade-in-up"></div>
+      <div class="gallery-item fade-in-up"></div>
+      <div class="gallery-item fade-in-up"></div>
+      <div class="gallery-item fade-in-up"></div>
+      <div class="gallery-item fade-in-up"></div>
+      <div class="gallery-item fade-in-up"></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="section-header fade-in-up">
+      <p class="section-label">Kết nối</p>
+      <h2 class="section-title">Follow Me</h2>
+      <p class="section-desc">Cập nhật những thông tin mới nhất về âm nhạc và hoạt động</p>
+    </div>
+
+    <div class="social-links">
+      <a href="https://www.youtube.com/@SonTungMTP" class="social-link" target="_blank" title="YouTube">▶</a>
+      <a href="https://www.instagram.com/sontungmtp" class="social-link" target="_blank" title="Instagram">📷</a>
+      <a href="https://www.facebook.com/MTP.Fan" class="social-link" target="_blank" title="Facebook">f</a>
+      <a href="https://twitter.com/sontungmtp" class="social-link" target="_blank" title="Twitter">𝕏</a>
+      <a href="https://www.tiktok.com/@mtp.fan" class="social-link" target="_blank" title="TikTok">♪</a>
+      <a href="https://mtpentertainment.com" class="social-link" target="_blank" title="Website">🌐</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">SƠN TÙNG <span style="color: var(--accent);">M-TP</span></div>
+      <p class="footer-text">
+        Vietnamese Artist · Singer · Songwriter · Actor<br>
+        M-TP Entertainment · Gucci Friend of House
+      </p>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Sơn Tùng M-TP. All rights reserved. | Designed by Website 3 Ngày</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    // Header scroll effect
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      menuToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+    });
+
+    // Close mobile menu when clicking a link
+    const navLinksItems = navLinks.querySelectorAll('a');
+    navLinksItems.forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        menuToggle.textContent = '☰';
+      });
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Intersection Observer for fade-in animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    // Initially set fade-in elements to be invisible
+    const fadeElements = document.querySelectorAll('.fade-in-up');
+    fadeElements.forEach((el, index) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(30px)';
+      el.style.transition = `all 0.8s ease ${index * 0.1}s`;
+      observer.observe(el);
+    });
+
+    // Stats counter animation
+    const animateCounter = (element, target) => {
+      const increment = target / 50;
+      let current = 0;
+      
+      const updateCounter = () => {
+        current += increment;
+        if (current < target) {
+          element.textContent = Math.floor(current).toLocaleString() + '+';
+          requestAnimationFrame(updateCounter);
+        } else {
+          element.textContent = target.toLocaleString() + '+';
+        }
+      };
+      
+      updateCounter();
+    };
+
+    // Trigger counter animation when stats section is visible
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const statNumbers = entry.target.querySelectorAll('.stat-number');
+          statNumbers.forEach(stat => {
+            const text = stat.textContent;
+            const number = parseInt(text.replace(/[^0-9]/g, ''));
+            if (number) {
+              stat.textContent = '0+';
+              setTimeout(() => animateCounter(stat, number), 200);
+            }
+          });
+          statsObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    const statsSection = document.querySelector('.stats-grid');
+    if (statsSection) {
+      statsObserver.observe(statsSection.parentElement);
+    }
+
+    // Dynamic year in footer
+    const currentYear = new Date().getFullYear();
+    document.querySelector('.footer-bottom p').innerHTML = 
+      `&copy; ${currentYear} Sơn Tùng M-TP. All rights reserved. | Designed by Website 3 Ngày`;
+
+    // Parallax effect for hero glows
+    window.addEventListener('mousemove', (e) => {
+      const glows = document.querySelectorAll('.hero-glow');
+      const x = e.clientX / window.innerWidth;
+      const y = e.clientY / window.innerHeight;
+      
+      glows.forEach((glow, index) => {
+        const speed = (index + 1) * 20;
+        glow.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
+      });
+    });
+  </script>
+
+</body>
+</html>
