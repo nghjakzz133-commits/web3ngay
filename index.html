@@ -5,21 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Website 3 Ngày – Thiết kế website bán hàng hiệu quả từ 1.3 triệu</title>
   <meta name="description" content="Thiết kế website chuẩn bán hàng – hoàn thiện trọn gói trong 3 ngày – giao diện xịn – tối ưu chuyển đổi – Tặng tên miền & hosting – Giá từ 1.3 triệu." />
-
-  <link rel="stylesheet" href="/assets/css/core.css" />
-<link rel="stylesheet" href="/assets/css/landing.css" />
-
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 
 <!-- ================= HEADER ================= -->
-<header class="header">
+<header class="header" id="header">
   <div class="container nav">
     
     <!-- LOGO -->
     <a href="/" class="logo">
-      <img src="/assets/img/global/logo.png" alt="Website 3 Ngày">
+      <div class="logo-icon">W3N</div>
       <span class="logo-text">Website 3 Ngày</span>
     </a>
 
@@ -32,300 +29,658 @@
         </p>
       </div>
 
-     <div class="nav-main">
-  <a class="nav-link" href="../">Trang chủ</a>
-  <a class="nav-link" href="../about/">Giới thiệu</a>
-  <a class="nav-link" href="../commit/">Quy trình</a>
-  <a class="nav-link" href="../demos/">Demo</a>
-  <a class="nav-link" href="../pricing/">Bảng giá</a>
-</div>
-
-
+      <div class="nav-main">
+        <a class="nav-link" href="#hero">Trang chủ</a>
+        <a class="nav-link" href="#about">Giới thiệu</a>
+        <a class="nav-link" href="#process">Quy trình</a>
+        <a class="nav-link" href="#demos">Demo</a>
+        <a class="nav-link" href="#pricing">Bảng giá</a>
+      </div>
 
       <div class="nav-bottom">
-        <a class="nav-link nav-cta" href="/contact/">Liên hệ</a>
+        <a class="nav-link nav-cta" href="#contact">Liên hệ</a>
       </div>
 
     </nav>
 
     <!-- MOBILE TOGGLE -->
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-      ☰
+      <span></span>
+      <span></span>
+      <span></span>
     </button>
 
   </div>
 </header>
 
-
-
-
+<!-- Particles Background -->
+<div class="particles" id="particles"></div>
 
 <!-- ================= HERO ================= -->
-<section class="hero">
+<section class="hero" id="hero">
+  <div class="hero-gradient"></div>
   <div class="hero-blur blur-1"></div>
   <div class="hero-blur blur-2"></div>
+  <div class="hero-blur blur-3"></div>
 
   <div class="container hero-grid">
     <div class="hero-content">
-      <p class="hero-eyebrow">🚀 ĐÃ LÀM HƠN 150+ WEBSITE BÁN HÀNG THÀNH CÔNG</p>
+      <div class="hero-eyebrow" data-aos="fade-down">
+        <span class="pulse-dot"></span>
+        🚀 ĐÃ LÀM HƠN 150+ WEBSITE BÁN HÀNG THÀNH CÔNG
+      </div>
 
-      <h1>
+      <h1 data-aos="fade-up" data-aos-delay="100">
         Website bán hàng hiệu quả<br>
-        <span class="highlight">Hoàn thiện trong 3-7 ngày</span>
+        <span class="highlight">
+          <span class="highlight-text">Hoàn thiện trong 3-7 ngày</span>
+          <svg class="highlight-underline" viewBox="0 0 300 12" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 6 Q 150 3 295 6" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"/>
+          </svg>
+        </span>
       </h1>
 
-      <p class="hero-desc">
+      <p class="hero-desc" data-aos="fade-up" data-aos-delay="200">
         Thiết kế website chuẩn UI/UX – tốc độ cao – tối ưu chuyển đổi – giá từ <strong>1.3 triệu</strong>.
         Dành cho người <strong>muốn có website xịn để bán hàng thật</strong>, không làm cho có.
         <strong>Tặng kèm tên miền + hosting + SSL miễn phí.</strong>
       </p>
 
-      <div class="hero-cta">
-        <a class="btn btn-primary" href="/website-3-ngay/demos/">Xem website mẫu</a>
-        <a class="btn btn-outline" href="/website-3-ngay/pricing/">Xem bảng giá từ 1.3tr</a>
+      <div class="hero-cta" data-aos="fade-up" data-aos-delay="300">
+        <a class="btn btn-primary" href="#demos">
+          <span>Xem website mẫu</span>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a class="btn btn-outline" href="#pricing">
+          <span>Xem bảng giá từ 1.3tr</span>
+        </a>
       </div>
 
-      <div class="hero-trust">
-        <span>✅ Hoàn tiền 100% nếu không đúng cam kết</span>
-        <span>⚡ Làm nhanh – rõ ràng – không phát sinh</span>
-        <span>🎁 Tặng tên miền + hosting miễn phí</span>
+      <div class="hero-trust" data-aos="fade-up" data-aos-delay="400">
+        <div class="trust-item">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M16.25 6.25L7.5 15L3.75 11.25" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Hoàn tiền 100% nếu không đúng cam kết</span>
+        </div>
+        <div class="trust-item">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M10 3.75L11.25 8.75H16.25L12.5 11.875L13.75 16.875L10 13.75L6.25 16.875L7.5 11.875L3.75 8.75H8.75L10 3.75Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Làm nhanh – rõ ràng – không phát sinh</span>
+        </div>
+        <div class="trust-item">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M17.5 8.75V6.25C17.5 5.56 16.94 5 16.25 5H3.75C3.06 5 2.5 5.56 2.5 6.25V13.75C2.5 14.44 3.06 15 3.75 15H10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M13.75 12.5L15.625 14.375L18.75 11.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Tặng tên miền + hosting miễn phí</span>
+        </div>
       </div>
     </div>
 
-    <div class="hero-media">
-      <img src="/website-3-ngay/assets/img/global/hero-mockup.png" class="hero-mockup" alt="Mockup website bán hàng">
+    <div class="hero-media" data-aos="fade-left" data-aos-delay="200">
+      <div class="mockup-container">
+        <div class="mockup-glow"></div>
+        <div class="mockup-frame">
+          <div class="mockup-screen">
+            <div class="mockup-browser-bar">
+              <div class="browser-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="browser-url">yourdomain.com</div>
+            </div>
+            <div class="mockup-content">
+              <div class="mock-hero"></div>
+              <div class="mock-section"></div>
+              <div class="mock-cards">
+                <div class="mock-card"></div>
+                <div class="mock-card"></div>
+                <div class="mock-card"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <div class="mouse">
+      <div class="wheel"></div>
+    </div>
+    <div class="scroll-text">Scroll để khám phá</div>
   </div>
 </section>
 
-<div class="wave-divider"></div>
+<!-- ================= STATS ================= -->
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-card" data-aos="zoom-in" data-aos-delay="0">
+        <div class="stat-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path d="M28 12V26C28 27.1046 27.1046 28 26 28H6C4.89543 28 4 27.1046 4 26V6C4 4.89543 4.89543 4 6 4H20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M28 4L16 16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M20 4H28V12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="stat-number" data-target="150">0</div>
+        <div class="stat-label">Website hoàn thành</div>
+      </div>
 
-<!-- ================= SOCIAL PROOF ================= -->
-<section class="section section-soft">
-  <div class="container text-center">
-    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 24px;">
-      <strong>150+ khách hàng</strong> đã tin tưởng và sử dụng dịch vụ
-    </p>
-    <div class="value-grid">
-      <div class="card" style="padding: 20px;">
-        <h3 style="font-size: 2rem; color: var(--primary); margin-bottom: 8px;">150+</h3>
-        <p style="margin: 0;">Website hoàn thành</p>
+      <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
+        <div class="stat-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="2.5"/>
+            <path d="M16 8V16L20 20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="stat-number">3-7</div>
+        <div class="stat-label">Ngày triển khai</div>
       </div>
-      <div class="card" style="padding: 20px;">
-        <h3 style="font-size: 2rem; color: var(--primary); margin-bottom: 8px;">3-7 ngày</h3>
-        <p style="margin: 0;">Thời gian triển khai</p>
-      </div>
-      <div class="card" style="padding: 20px;">
-        <h3 style="font-size: 2rem; color: var(--primary); margin-bottom: 8px;">98%</h3>
-        <p style="margin: 0;">Khách hàng hài lòng</p>
+
+      <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
+        <div class="stat-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path d="M16 4L20.944 13.056L31 14.608L23.5 21.888L25.388 32L16 27.056L6.612 32L8.5 21.888L1 14.608L11.056 13.056L16 4Z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="stat-number" data-target="98">0</div>
+        <div class="stat-label">% Khách hài lòng</div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ================= FIT ================= -->
-<section class="section section-light">
+<section class="section section-fit" id="about">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head" data-aos="fade-up">
+      <span class="section-tag">Dành cho ai</span>
       <h2>Dịch vụ này dành cho ai?</h2>
       <p>Website 3 Ngày sinh ra cho những người cần hiệu quả thật, không màu mè dư thừa.</p>
     </div>
 
-    <div class="fit-box">
-      <ul>
-        <li>✔ <strong>Cá nhân kinh doanh, freelancer</strong> cần website gọn gàng, dễ bán hàng, không phức tạp</li>
-        <li>✔ <strong>Shop nhỏ, doanh nghiệp mới</strong> muốn có website chuyên nghiệp để chạy quảng cáo Facebook/Google</li>
-        <li>✔ <strong>Người không rành kỹ thuật</strong> nhưng vẫn muốn làm chủ website, tự cập nhật nội dung</li>
-        <li>✔ <strong>Người đã từng làm web ở nơi khác</strong> nhưng kết quả không như mong đợi, muốn tìm đơn vị uy tín</li>
-        <li>✔ <strong>Người cần gấp</strong> – có deadline cụ thể – muốn bàn giao nhanh để kịp triển khai marketing</li>
-      </ul>
-    </div>
+    <div class="fit-grid">
+      <div class="fit-item" data-aos="fade-up" data-aos-delay="0">
+        <div class="fit-icon">👤</div>
+        <h3>Cá nhân kinh doanh, freelancer</h3>
+        <p>Cần website gọn gàng, dễ bán hàng, không phức tạp</p>
+      </div>
 
-    <div class="text-center mt-40">
-      <p style="font-size: 1.05rem; color: var(--text);">
-        <strong>Chưa chắc phù hợp?</strong> Chat Zalo để được tư vấn miễn phí – nói thẳng có làm được hay không.
-      </p>
-      <a href="https://zalo.me/0373453757" class="btn btn-primary mt-20">Tư vấn miễn phí qua Zalo</a>
+      <div class="fit-item" data-aos="fade-up" data-aos-delay="100">
+        <div class="fit-icon">🏪</div>
+        <h3>Shop nhỏ, doanh nghiệp mới</h3>
+        <p>Muốn có website chuyên nghiệp để chạy quảng cáo Facebook/Google</p>
+      </div>
+
+      <div class="fit-item" data-aos="fade-up" data-aos-delay="200">
+        <div class="fit-icon">🎯</div>
+        <h3>Người không rành kỹ thuật</h3>
+        <p>Vẫn muốn làm chủ website, tự cập nhật nội dung</p>
+      </div>
+
+      <div class="fit-item" data-aos="fade-up" data-aos-delay="300">
+        <div class="fit-icon">🔄</div>
+        <h3>Đã từng làm web ở nơi khác</h3>
+        <p>Kết quả không như mong đợi, muốn tìm đơn vị uy tín</p>
+      </div>
+
+      <div class="fit-item" data-aos="fade-up" data-aos-delay="400">
+        <div class="fit-icon">⚡</div>
+        <h3>Người cần gấp</h3>
+        <p>Có deadline cụ thể – muốn bàn giao nhanh để kịp triển khai marketing</p>
+      </div>
+
+      <div class="fit-item fit-cta" data-aos="fade-up" data-aos-delay="500">
+        <div class="fit-icon">💬</div>
+        <h3>Chưa chắc phù hợp?</h3>
+        <p>Chat Zalo để được tư vấn miễn phí</p>
+        <a href="https://zalo.me/0373453757" class="btn btn-primary btn-sm">Tư vấn ngay</a>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ================= VALUE ================= -->
-<section class="section section-soft">
+<section class="section section-value">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head" data-aos="fade-up">
+      <span class="section-tag">Giá trị cốt lõi</span>
       <h2>Vì sao 150+ khách hàng chọn Website 3 Ngày?</h2>
       <p>Không làm cho có. Mọi thứ đều xoay quanh hiệu quả và chuyển đổi thật.</p>
     </div>
 
     <div class="value-grid">
 
-      <div class="value-item">
-        <img src="/website-3-ngay/assets/img/icons/fast.svg" alt="">
-        <h3>Hoàn thành cực nhanh</h3>
+      <div class="value-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="value-icon">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+            <path d="M24 8L26 16H34L28 21L30 29L24 24L18 29L20 21L14 16H22L24 8Z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="2.5" stroke-dasharray="4 4"/>
+          </svg>
+        </div>
+        <h3>Hoàn thiện cực nhanh</h3>
         <p>Có website hoàn chỉnh chỉ sau 3-7 ngày, đúng tiến độ đã hẹn. Không kéo dài – không hứa suông.</p>
+        <div class="value-badge">Cam kết đúng hạn</div>
       </div>
 
-      <div class="value-item">
-        <img src="/website-3-ngay/assets/img/icons/sale.svg" alt="">
+      <div class="value-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="value-icon">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+            <rect x="8" y="12" width="32" height="28" rx="2" stroke="currentColor" stroke-width="2.5"/>
+            <path d="M16 20H32M16 28H28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="34" cy="18" r="6" fill="currentColor"/>
+          </svg>
+        </div>
         <h3>Chuẩn bán hàng</h3>
         <p>Bố cục tập trung CTA, dẫn hành vi người dùng, tối ưu tỉ lệ chuyển đổi. Mọi chi tiết đều hướng đến bán hàng.</p>
+        <div class="value-badge">Tối ưu chuyển đổi</div>
       </div>
 
-      <div class="value-item">
-        <img src="/website-3-ngay/assets/img/icons/easy.svg" alt="">
+      <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="value-icon">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+            <rect x="10" y="14" width="28" height="20" rx="2" stroke="currentColor" stroke-width="2.5"/>
+            <path d="M14 22H34M14 28H26" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M24 34V40M18 40H30" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </div>
         <h3>Dễ dùng – dễ quản lý</h3>
         <p>Không rối kỹ thuật, tự cập nhật nội dung mà không cần dev. Tiết kiệm chi phí vận hành lâu dài.</p>
+        <div class="value-badge">Tự quản lý 100%</div>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- ================= FEATURE 1 ================= -->
-<section class="section section-light">
-  <div class="container split">
-    <div class="split-content">
-      <h3>Thiết kế chuẩn UI/UX theo hành vi người dùng</h3>
-      <p>
-        Không chỉ đẹp mắt – mà còn <strong>dẫn dắt hành động</strong>.  
-        Giao diện được thiết kế theo ngành nghề, dẫn mắt – dẫn hành động,
-        giúp khách ở lại lâu hơn và bấm nút hành động nhiều hơn.
-      </p>
-      <p>
-        <strong>Kết quả:</strong> Tỉ lệ chuyển đổi từ khách truy cập thành khách hàng tăng cao hơn hẳn.
-      </p>
-    </div>
-
-    <div class="split-media">
-      <img src="/website-3-ngay/assets/img/sections/uiux.png" alt="Thiết kế UI/UX chuẩn bán hàng">
-    </div>
-  </div>
-</section>
-
-<!-- ================= FEATURE 2 ================= -->
-<section class="section section-soft">
-  <div class="container split reverse">
-    <div class="split-content">
-      <h3>Kỹ thuật ổn định – tải nhanh – sẵn sàng chạy ads</h3>
-      <p>
-        Code gọn, tối ưu tốc độ, hiển thị mượt trên mọi thiết bị.
-        Không lỗi vặt – không vỡ layout – yên tâm vận hành lâu dài.
-      </p>
-      <p>
-        <strong>Đặc biệt:</strong> Tối ưu tốc độ tải trang giúp <strong>giảm chi phí quảng cáo</strong> 
-        khi chạy Facebook Ads/Google Ads – trang load nhanh = điểm chất lượng cao = chi phí thấp hơn.
-      </p>
-    </div>
-
-    <div class="split-media">
-      <img src="/website-3-ngay/assets/img/sections/tech.png" alt="Kỹ thuật tối ưu tốc độ">
-    </div>
-  </div>
-</section>
-
-<!-- ================= FEATURE 3 ================= -->
-<section class="section section-light">
-  <div class="container split">
-    <div class="split-content">
-      <h3>Dễ quản lý – dễ mở rộng về sau</h3>
-      <p>
-        Website được xây dựng đơn giản, logic rõ ràng.
-        Phù hợp cho người không rành kỹ thuật nhưng vẫn làm chủ hệ thống.
-      </p>
-      <p>
-        <strong>Tương lai:</strong> Khi doanh nghiệp phát triển, bạn có thể dễ dàng mở rộng thêm:
-        giỏ hàng, đặt lịch online, tích hợp CRM, chatbot AI... mà không cần làm lại từ đầu.
-      </p>
-    </div>
-
-    <div class="split-media">
-      <img src="/website-3-ngay/assets/img/sections/manage.png" alt="Quản lý website dễ dàng">
-    </div>
-  </div>
-</section>
-
-<!-- ================= PRICING TEASER ================= -->
-<section class="section section-soft">
+<!-- ================= FEATURES ================= -->
+<section class="section section-features">
   <div class="container">
-    <div class="section-head">
+    
+    <!-- Feature 1 -->
+    <div class="feature-row" data-aos="fade-right">
+      <div class="feature-content">
+        <span class="feature-number">01</span>
+        <h3>Thiết kế chuẩn UI/UX theo hành vi người dùng</h3>
+        <p>
+          Không chỉ đẹp mắt – mà còn <strong>dẫn dắt hành động</strong>.  
+          Giao diện được thiết kế theo ngành nghề, dẫn mắt – dẫn hành động,
+          giúp khách ở lại lâu hơn và bấm nút hành động nhiều hơn.
+        </p>
+        <div class="feature-stats">
+          <div class="feature-stat">
+            <div class="stat-value">+45%</div>
+            <div class="stat-desc">Tăng thời gian ở lại</div>
+          </div>
+          <div class="feature-stat">
+            <div class="stat-value">+68%</div>
+            <div class="stat-desc">Tỉ lệ chuyển đổi</div>
+          </div>
+        </div>
+      </div>
+      <div class="feature-visual">
+        <div class="visual-card">
+          <div class="visual-header">
+            <div class="visual-dots">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+          <div class="visual-body">
+            <div class="visual-element hero-el"></div>
+            <div class="visual-element text-el"></div>
+            <div class="visual-element text-el short"></div>
+            <div class="visual-element btn-el"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature 2 -->
+    <div class="feature-row reverse" data-aos="fade-left">
+      <div class="feature-content">
+        <span class="feature-number">02</span>
+        <h3>Kỹ thuật ổn định – tải nhanh – sẵn sàng chạy ads</h3>
+        <p>
+          Code gọn, tối ưu tốc độ, hiển thị mượt trên mọi thiết bị.
+          Không lỗi vặt – không vỡ layout – yên tâm vận hành lâu dài.
+        </p>
+        <div class="feature-highlights">
+          <div class="highlight-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Tốc độ tải &lt; 2s</span>
+          </div>
+          <div class="highlight-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+              <path d="M9 3V21M15 3V21M3 9H21M3 15H21" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            <span>Responsive 100%</span>
+          </div>
+          <div class="highlight-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+              <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>SEO Optimized</span>
+          </div>
+        </div>
+      </div>
+      <div class="feature-visual">
+        <div class="speed-meter">
+          <svg class="meter-svg" viewBox="0 0 200 120">
+            <path class="meter-bg" d="M 20 100 A 80 80 0 0 1 180 100" stroke="#e5e7eb" stroke-width="20" fill="none"/>
+            <path class="meter-fill" d="M 20 100 A 80 80 0 0 1 180 100" stroke="url(#speedGradient)" stroke-width="20" fill="none" stroke-dasharray="251.2" stroke-dashoffset="62.8"/>
+            <defs>
+              <linearGradient id="speedGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#10b981"/>
+                <stop offset="100%" style="stop-color:#3b82f6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div class="meter-value">98<span>/100</span></div>
+          <div class="meter-label">Performance Score</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature 3 -->
+    <div class="feature-row" data-aos="fade-right">
+      <div class="feature-content">
+        <span class="feature-number">03</span>
+        <h3>Dễ quản lý – dễ mở rộng về sau</h3>
+        <p>
+          Website được xây dựng đơn giản, logic rõ ràng.
+          Phù hợp cho người không rành kỹ thuật nhưng vẫn làm chủ hệ thống.
+        </p>
+        <div class="expandable-list">
+          <div class="expand-item">
+            <div class="expand-icon">🛒</div>
+            <span>Giỏ hàng & thanh toán online</span>
+          </div>
+          <div class="expand-item">
+            <div class="expand-icon">📅</div>
+            <span>Đặt lịch hẹn tự động</span>
+          </div>
+          <div class="expand-item">
+            <div class="expand-icon">🤖</div>
+            <span>Chatbot AI hỗ trợ</span>
+          </div>
+          <div class="expand-item">
+            <div class="expand-icon">📊</div>
+            <span>Tích hợp CRM & Analytics</span>
+          </div>
+        </div>
+      </div>
+      <div class="feature-visual">
+        <div class="modules-grid">
+          <div class="module-card">
+            <div class="module-icon">📝</div>
+            <div class="module-name">CMS</div>
+          </div>
+          <div class="module-card">
+            <div class="module-icon">🎨</div>
+            <div class="module-name">Design</div>
+          </div>
+          <div class="module-card">
+            <div class="module-icon">⚙️</div>
+            <div class="module-name">Settings</div>
+          </div>
+          <div class="module-card">
+            <div class="module-icon">📈</div>
+            <div class="module-name">Analytics</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= PRICING ================= -->
+<section class="section section-pricing" id="pricing">
+  <div class="container">
+    <div class="section-head" data-aos="fade-up">
+      <span class="section-tag">Bảng giá</span>
       <h2>Bảng giá minh bạch – Không phát sinh</h2>
       <p>4 gói từ thấp đến cao phù hợp mọi nhu cầu – Tặng kèm tên miền + hosting</p>
     </div>
 
-    <div class="process-grid">
+    <div class="pricing-grid">
       
-      <div class="card">
-        <h3 style="color: var(--primary);">1.3 triệu</h3>
-        <p style="margin: 8px 0; font-weight: 600;">Gói Khởi Đầu</p>
-        <p style="font-size: 0.85rem;">Landing page đơn giản</p>
-        <p style="font-size: 0.85rem; color: var(--primary);">🎁 Tặng tên miền + hosting 3 tháng</p>
+      <div class="pricing-card" data-aos="zoom-in" data-aos-delay="0">
+        <div class="pricing-header">
+          <h3>Gói Khởi Đầu</h3>
+          <div class="pricing-price">
+            <span class="currency">đ</span>
+            <span class="amount">1.3</span>
+            <span class="unit">triệu</span>
+          </div>
+          <p class="pricing-desc">Landing page đơn giản</p>
+        </div>
+        <ul class="pricing-features">
+          <li>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M16.25 6.25L7.5 15L3.75 11.25" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            1 trang landing page
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M16.25 6.25L7.5 15L3.75 11.25" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Responsive mobile
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M16.25 6.25L7.5 15L3.75 11.25" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Form liên hệ
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M16.25 6.25L7.5 15L3.75 11.25" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Tên miền + hosting 3 tháng
+          </li>
+        </ul>
+        <a href="https://zalo.me/0373453757" class="btn btn-outline">Chọn gói này</a>
       </div>
 
-      <div class="card">
-        <h3 style="color: var(--primary);">2.5 triệu</h3>
-        <p style="margin: 8px 0; font-weight: 600;">Gói Cơ Bản</p>
-        <p style="font-size: 0.85rem;">Website 3 trang</p>
-        <p style="font-size: 0.85rem; color: var(--primary);">🎁 Tặng tên miền + hosting 6 tháng + email</p>
+      <div class="pricing-card" data-aos="zoom-in" data-aos-delay="100">
+        <div class="pricing-header">
+          <h3>Gói Cơ Bản</h3>
+          <div class="pricing-price">
+            <span class="currency">đ</span>
+            <span class="amount">2.5</span>
+            <span class="unit">triệu</span>
+          </div>
+          <p class="pricing-desc">Website 3 trang</p>
+        </div>
+        <ul class="pricing-features">
+          <li>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M16.25 6.25L7.5 15L3.75 11.25" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            3 trang nội dung
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M16.25 6.25L7.5 15L3.75 11.25" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            SEO cơ bản
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M16.25 6.25L7.5 15L3.75 11.25" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Google Maps tích hợp
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M16.25 6.25L7.5 15L3.75 11.25" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Tên miền + hosting 6 tháng + email
+          </li>
+        </ul>
+        <a href="https://zalo.me/0373453757" class="btn btn-outline">Chọn gói này</a>
       </div>
 
-      <div class="card highlight">
-        <h3 style="color: var(--primary);">4.2 triệu</h3>
-        <p style="margin: 8px 0; font-weight: 600;">Gói Tiêu Chuẩn ⭐</p>
-        <p style="font-size: 0.85rem;">Website 5-7 trang</p>
-        <p style="font-size: 0.85rem; color: var(--primary);">🎁 Tặng tên miền + hosting 1 năm + 5 email + banner</p>
+      <div class="pricing-card featured" data-aos="zoom-in" data-aos-delay="200">
+        <div class="pricing-badge">Phổ biến nhất</div>
+        <div class="pricing-header">
+          <h3>Gói Tiêu Chuẩn</h3>
+          <div class="pricing-price">
+            <span class="currency">đ</span>
+            <span class="amount">4.2</span>
+            <span class="unit">triệu</span>
+          </div>
+          <p class="pricing-desc">Website 5-7 trang</p>
+        </div>
+        <ul class="pricing-features">
+          <li>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M16.25 6.25L7.5 15L3.75 11.25" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            5-7 trang nội dung
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M16.25 6.25L7.5 15L3.75 11.25" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            SEO nâng cao
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M16.25 6.25L7.5 15L3.75 11.25" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Thiết kế banner quảng cáo
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M16.25 6.25L7.5 15L3.75 11.25" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Tên miền + hosting 1 năm + 5 email
+          </li>
+        </ul>
+        <a href="https://zalo.me/0373453757" class="btn btn-primary">Chọn gói này</a>
       </div>
 
-      <div class="card">
-        <h3 style="color: var(--primary);">6 triệu</h3>
-        <p style="margin: 8px 0; font-weight: 600;">Gói Chuyên Nghiệp</p>
-        <p style="font-size: 0.85rem;">Website 8-12 trang</p>
-        <p style="font-size: 0.85rem; color: var(--primary);">🎁 Tặng tên miền 2 năm + 10 email + logo + fanpage</p>
+      <div class="pricing-card" data-aos="zoom-in" data-aos-delay="300">
+        <div class="pricing-header">
+          <h3>Gói Chuyên Nghiệp</h3>
+          <div class="pricing-price">
+            <span class="currency">đ</span>
+            <span class="amount">6</span>
+            <span class="unit">triệu</span>
+          </div>
+          <p class="pricing-desc">Website 8-12 trang</p>
+        </div>
+        <ul class="pricing-features">
+          <li>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M16.25 6.25L7.5 15L3.75 11.25" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            8-12 trang nội dung
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M16.25 6.25L7.5 15L3.75 11.25" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Thiết kế logo chuyên nghiệp
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M16.25 6.25L7.5 15L3.75 11.25" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Setup fanpage Facebook
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M16.25 6.25L7.5 15L3.75 11.25" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Tên miền 2 năm + hosting 1 năm + 10 email
+          </li>
+        </ul>
+        <a href="https://zalo.me/0373453757" class="btn btn-outline">Chọn gói này</a>
       </div>
 
     </div>
 
-    <div class="text-center mt-40">
-      <a href="/website-3-ngay/pricing/" class="btn btn-primary">Xem chi tiết bảng giá đầy đủ</a>
+    <div class="pricing-note" data-aos="fade-up">
+      <p>💡 <strong>Lưu ý:</strong> Tất cả gói đều bao gồm SSL miễn phí, hỗ trợ kỹ thuật, và bảo hành theo cam kết</p>
     </div>
   </div>
 </section>
 
 <!-- ================= TESTIMONIALS ================= -->
-<section class="section section-light">
+<section class="section section-testimonials">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head" data-aos="fade-up">
+      <span class="section-tag">Đánh giá</span>
       <h2>Khách hàng nói gì về dịch vụ?</h2>
       <p>Phản hồi thật từ những khách hàng đã sử dụng dịch vụ</p>
     </div>
 
-    <div class="value-grid">
+    <div class="testimonials-grid">
       
-      <div class="card" style="padding: 28px; text-align: left;">
-        <p style="font-size: 0.95rem; margin-bottom: 16px; font-style: italic;">
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="testimonial-stars">
+          <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+        </div>
+        <p class="testimonial-text">
           "Mình làm mỹ phẩm, cần web gấp để chạy ads. Anh làm đúng 3 ngày như cam kết, 
           giao diện đẹp, load nhanh. Quan trọng là tỉ lệ chốt đơn tăng hẳn so với trước."
         </p>
-        <p style="font-weight: 600; color: var(--primary); margin: 0;">— Chị Minh Anh</p>
-        <p style="font-size: 0.85rem; margin: 0;">Chủ shop mỹ phẩm tại TP.HCM</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">MA</div>
+          <div class="author-info">
+            <div class="author-name">Chị Minh Anh</div>
+            <div class="author-title">Chủ shop mỹ phẩm tại TP.HCM</div>
+          </div>
+        </div>
       </div>
 
-      <div class="card" style="padding: 28px; text-align: left;">
-        <p style="font-size: 0.95rem; margin-bottom: 16px; font-style: italic;">
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="testimonial-stars">
+          <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+        </div>
+        <p class="testimonial-text">
           "Giá hợp lý, làm nhanh, quan trọng là anh tư vấn thẳng thắn luôn. 
           Mình không rành kỹ thuật nhưng vẫn tự cập nhật nội dung được. Rất hài lòng!"
         </p>
-        <p style="font-weight: 600; color: var(--primary); margin: 0;">— Anh Tuấn</p>
-        <p style="font-size: 0.85rem; margin: 0;">Freelancer thiết kế nội thất</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">AT</div>
+          <div class="author-info">
+            <div class="author-name">Anh Tuấn</div>
+            <div class="author-title">Freelancer thiết kế nội thất</div>
+          </div>
+        </div>
       </div>
 
-      <div class="card" style="padding: 28px; text-align: left;">
-        <p style="font-size: 0.95rem; margin-bottom: 16px; font-style: italic;">
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="testimonial-stars">
+          <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+        </div>
+        <p class="testimonial-text">
           "Trước làm web ở chỗ khác mãi không xong, chuyển qua đây 5 ngày có web ngay. 
           Responsive chuẩn, SEO ok, hỗ trợ nhiệt tình. Recommend!"
         </p>
-        <p style="font-weight: 600; color: var(--primary); margin: 0;">— Chị Hương</p>
-        <p style="font-size: 0.85rem; margin: 0;">Giám đốc công ty tư vấn du học</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">CH</div>
+          <div class="author-info">
+            <div class="author-name">Chị Hương</div>
+            <div class="author-title">Giám đốc công ty tư vấn du học</div>
+          </div>
+        </div>
       </div>
 
     </div>
@@ -333,104 +688,172 @@
 </section>
 
 <!-- ================= PROCESS ================= -->
-<section class="section section-soft">
+<section class="section section-process" id="process">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head" data-aos="fade-up">
+      <span class="section-tag">Quy trình</span>
       <h2>Quy trình làm việc minh bạch</h2>
       <p>Làm từng bước rõ ràng – không mập mờ – không phát sinh chi phí – bàn giao đúng hẹn</p>
     </div>
 
-    <div class="process-grid">
-      <div class="card">
-        <h4 style="margin-bottom: 8px;">1️⃣ Tư vấn & định hướng</h4>
-        <p style="font-size: 0.85rem; margin: 0;">
-          Chat Zalo để trao đổi nhu cầu. Tư vấn thẳng thắn: nên làm gói nào, có phù hợp không.
-        </p>
+    <div class="process-timeline">
+      
+      <div class="process-step" data-aos="fade-right" data-aos-delay="0">
+        <div class="step-number">01</div>
+        <div class="step-content">
+          <h3>Tư vấn & định hướng</h3>
+          <p>Chat Zalo để trao đổi nhu cầu. Tư vấn thẳng thắn: nên làm gói nào, có phù hợp không.</p>
+          <div class="step-duration">⏱️ 30 phút - 1 giờ</div>
+        </div>
+        <div class="step-connector"></div>
       </div>
-      <div class="card">
-        <h4 style="margin-bottom: 8px;">2️⃣ Thiết kế giao diện</h4>
-        <p style="font-size: 0.85rem; margin: 0;">
-          Thiết kế theo ngành nghề, tối ưu bố cục. Bạn xem & góp ý trước khi code.
-        </p>
+
+      <div class="process-step" data-aos="fade-left" data-aos-delay="100">
+        <div class="step-number">02</div>
+        <div class="step-content">
+          <h3>Thiết kế giao diện</h3>
+          <p>Thiết kế theo ngành nghề, tối ưu bố cục. Bạn xem & góp ý trước khi code.</p>
+          <div class="step-duration">⏱️ 1-2 ngày</div>
+        </div>
+        <div class="step-connector"></div>
       </div>
-      <div class="card">
-        <h4 style="margin-bottom: 8px;">3️⃣ Lập trình & tối ưu</h4>
-        <p style="font-size: 0.85rem; margin: 0;">
-          Code chuẩn, tối ưu tốc độ, SEO cơ bản. Test kỹ trên mọi thiết bị trước khi bàn giao.
-        </p>
+
+      <div class="process-step" data-aos="fade-right" data-aos-delay="200">
+        <div class="step-number">03</div>
+        <div class="step-content">
+          <h3>Lập trình & tối ưu</h3>
+          <p>Code chuẩn, tối ưu tốc độ, SEO cơ bản. Test kỹ trên mọi thiết bị trước khi bàn giao.</p>
+          <div class="step-duration">⏱️ 2-4 ngày</div>
+        </div>
+        <div class="step-connector"></div>
       </div>
-      <div class="card">
-        <h4 style="margin-bottom: 8px;">4️⃣ Bàn giao & hỗ trợ</h4>
-        <p style="font-size: 0.85rem; margin: 0;">
-          Hướng dẫn sử dụng chi tiết. Hỗ trợ 1-3 tháng sau bàn giao tùy gói.
-        </p>
+
+      <div class="process-step" data-aos="fade-left" data-aos-delay="300">
+        <div class="step-number">04</div>
+        <div class="step-content">
+          <h3>Bàn giao & hỗ trợ</h3>
+          <p>Hướng dẫn sử dụng chi tiết. Hỗ trợ 1-3 tháng sau bàn giao tùy gói.</p>
+          <div class="step-duration">⏱️ Hỗ trợ dài hạn</div>
+        </div>
       </div>
+
     </div>
 
-    <div class="fit-box mt-40 text-center">
-      <p style="font-size: 1rem; margin-bottom: 20px;">
-        <strong>Thanh toán:</strong> 50% đặt cọc khi bắt đầu – 50% khi hoàn thành và bạn hài lòng<br>
-        <strong>Cam kết:</strong> Hoàn tiền 100% nếu không đúng cam kết về thời gian và chất lượng
-      </p>
+    <div class="process-guarantee" data-aos="zoom-in">
+      <div class="guarantee-item">
+        <div class="guarantee-icon">💰</div>
+        <div class="guarantee-text">
+          <strong>Thanh toán:</strong> 50% đặt cọc khi bắt đầu – 50% khi hoàn thành và bạn hài lòng
+        </div>
+      </div>
+      <div class="guarantee-item">
+        <div class="guarantee-icon">✅</div>
+        <div class="guarantee-text">
+          <strong>Cam kết:</strong> Hoàn tiền 100% nếu không đúng cam kết về thời gian và chất lượng
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ================= FAQ ================= -->
-<section class="section section-light">
+<section class="section section-faq">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head" data-aos="fade-up">
+      <span class="section-tag">FAQ</span>
       <h2>Câu hỏi thường gặp</h2>
       <p>Giải đáp nhanh các thắc mắc phổ biến</p>
     </div>
 
-    <div class="value-grid">
+    <div class="faq-grid">
       
-      <div class="card" style="padding: 24px; text-align: left;">
-        <h4 style="margin-bottom: 12px; color: var(--primary);">Tôi cần chuẩn bị gì?</h4>
-        <p style="font-size: 0.9rem; margin: 0;">
-          Chỉ cần: nội dung văn bản, hình ảnh (logo, sản phẩm), thông tin liên hệ. 
-          Chưa có đầy đủ? Chúng tôi hỗ trợ tư vấn.
-        </p>
+      <div class="faq-item" data-aos="fade-up" data-aos-delay="0">
+        <div class="faq-question">
+          <h4>Tôi cần chuẩn bị gì?</h4>
+          <div class="faq-toggle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+        <div class="faq-answer">
+          <p>Chỉ cần: nội dung văn bản, hình ảnh (logo, sản phẩm), thông tin liên hệ. 
+          Chưa có đầy đủ? Chúng tôi hỗ trợ tư vấn.</p>
+        </div>
       </div>
 
-      <div class="card" style="padding: 24px; text-align: left;">
-        <h4 style="margin-bottom: 12px; color: var(--primary);">3 ngày có kịp không?</h4>
-        <p style="font-size: 0.9rem; margin: 0;">
-          Gói đơn giản: 2-3 ngày. Gói phức tạp: 5-7 ngày. 
-          Thời gian tính từ khi nhận đủ nội dung từ bạn.
-        </p>
+      <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+        <div class="faq-question">
+          <h4>3 ngày có kịp không?</h4>
+          <div class="faq-toggle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+        <div class="faq-answer">
+          <p>Gói đơn giản: 2-3 ngày. Gói phức tạp: 5-7 ngày. 
+          Thời gian tính từ khi nhận đủ nội dung từ bạn.</p>
+        </div>
       </div>
 
-      <div class="card" style="padding: 24px; text-align: left;">
-        <h4 style="margin-bottom: 12px; color: var(--primary);">Có hỗ trợ sau bàn giao?</h4>
-        <p style="font-size: 0.9rem; margin: 0;">
-          Có! Hỗ trợ 1-3 tháng tùy gói: sửa lỗi, cập nhật nội dung nhỏ, hướng dẫn sử dụng.
-        </p>
+      <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+        <div class="faq-question">
+          <h4>Có hỗ trợ sau bàn giao?</h4>
+          <div class="faq-toggle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+        <div class="faq-answer">
+          <p>Có! Hỗ trợ 1-3 tháng tùy gói: sửa lỗi, cập nhật nội dung nhỏ, hướng dẫn sử dụng.</p>
+        </div>
       </div>
 
-      <div class="card" style="padding: 24px; text-align: left;">
-        <h4 style="margin-bottom: 12px; color: var(--primary);">Có chạy được ads không?</h4>
-        <p style="font-size: 0.9rem; margin: 0;">
-          Hoàn toàn có thể! Website tối ưu tốc độ, responsive chuẩn, 
-          sẵn sàng chạy Facebook Ads/Google Ads ngay.
-        </p>
+      <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+        <div class="faq-question">
+          <h4>Có chạy được ads không?</h4>
+          <div class="faq-toggle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+        <div class="faq-answer">
+          <p>Hoàn toàn có thể! Website tối ưu tốc độ, responsive chuẩn, 
+          sẵn sàng chạy Facebook Ads/Google Ads ngay.</p>
+        </div>
       </div>
 
-      <div class="card" style="padding: 24px; text-align: left;">
-        <h4 style="margin-bottom: 12px; color: var(--primary);">Có được sở hữu code không?</h4>
-        <p style="font-size: 0.9rem; margin: 0;">
-          Có! Bạn sở hữu 100% code, tên miền, hosting. 
-          Muốn chuyển đi đâu cũng được.
-        </p>
+      <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+        <div class="faq-question">
+          <h4>Có được sở hữu code không?</h4>
+          <div class="faq-toggle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+        <div class="faq-answer">
+          <p>Có! Bạn sở hữu 100% code, tên miền, hosting. 
+          Muốn chuyển đi đâu cũng được.</p>
+        </div>
       </div>
 
-      <div class="card" style="padding: 24px; text-align: left;">
-        <h4 style="margin-bottom: 12px; color: var(--primary);">Có mở rộng được sau này?</h4>
-        <p style="font-size: 0.9rem; margin: 0;">
-          Có! Dễ dàng nâng cấp thêm: giỏ hàng, đặt lịch online, 
-          tích hợp CRM khi doanh nghiệp phát triển.
-        </p>
+      <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+        <div class="faq-question">
+          <h4>Có mở rộng được sau này?</h4>
+          <div class="faq-toggle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M19 9L12 16L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+        <div class="faq-answer">
+          <p>Có! Dễ dàng nâng cấp thêm: giỏ hàng, đặt lịch online, 
+          tích hợp CRM khi doanh nghiệp phát triển.</p>
+        </div>
       </div>
 
     </div>
@@ -438,36 +861,103 @@
 </section>
 
 <!-- ================= URGENCY CTA ================= -->
-<section class="section section-soft">
+<section class="section section-urgency">
   <div class="container">
-    <div class="fit-box text-center" style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border: 2px solid #f59e0b;">
-      <h3 style="color: var(--text); margin-bottom: 12px;">🔥 Ưu đãi tháng này</h3>
-      <p style="font-size: 1.05rem; color: var(--text); margin-bottom: 20px;">
-        Đặt làm website trong tháng 02/2026 được <strong>giảm 10%</strong> toàn bộ gói + 
-        <strong>Tặng thêm 3 tháng hosting</strong> (giá trị 300.000đ)
+    <div class="urgency-box" data-aos="zoom-in">
+      <div class="urgency-icon">🔥</div>
+      <h3>Ưu đãi tháng này</h3>
+      <p class="urgency-offer">
+        Đặt làm website trong tháng <strong>02/2026</strong> được <strong class="highlight-text">giảm 10%</strong> toàn bộ gói + 
+        <strong class="highlight-text">Tặng thêm 3 tháng hosting</strong> (giá trị 300.000đ)
       </p>
-      <p style="font-size: 0.9rem; color: var(--text-muted);">
-        ⏰ Ưu đãi kết thúc 28/02/2026 – Chỉ áp dụng cho 20 khách hàng đầu tiên
-      </p>
-      <a href="https://zalo.me/0373453757" class="btn btn-primary mt-20">Nhận ưu đãi ngay</a>
+      <div class="urgency-timer">
+        <div class="timer-item">
+          <div class="timer-value" id="days">00</div>
+          <div class="timer-label">Ngày</div>
+        </div>
+        <div class="timer-separator">:</div>
+        <div class="timer-item">
+          <div class="timer-value" id="hours">00</div>
+          <div class="timer-label">Giờ</div>
+        </div>
+        <div class="timer-separator">:</div>
+        <div class="timer-item">
+          <div class="timer-value" id="minutes">00</div>
+          <div class="timer-label">Phút</div>
+        </div>
+        <div class="timer-separator">:</div>
+        <div class="timer-item">
+          <div class="timer-value" id="seconds">00</div>
+          <div class="timer-label">Giây</div>
+        </div>
+      </div>
+      <p class="urgency-note">⏰ Chỉ áp dụng cho 20 khách hàng đầu tiên</p>
+      <a href="https://zalo.me/0373453757" class="btn btn-primary btn-lg">Nhận ưu đãi ngay</a>
     </div>
   </div>
 </section>
 
 <!-- ================= FINAL CTA ================= -->
-<section class="cta">
-  <div class="container text-center">
-    <img src="/assets/img/global/logo.png" class="cta-logo" alt="Website 3 Ngày">
-    <h2>Bạn đang cần một website làm nghiêm túc?</h2>
-    <p>
-      Chat Zalo để được tư vấn thẳng thắn – miễn phí:<br>
-      <strong>Làm được hay không – Gói nào phù hợp – Nói rõ ngay từ đầu.</strong>
-    </p>
-    <a href="https://zalo.me/0373453757" class="btn btn-outline">Chat Zalo ngay (Miễn phí)</a>
-    <small class="cta-note">🔒 Tư vấn miễn phí – Không ràng buộc – Không spam – Phản hồi trong 5 phút</small>
+<section class="cta" id="contact">
+  <div class="container">
+    <div class="cta-content" data-aos="fade-up">
+      <div class="cta-logo">W3N</div>
+      <h2>Bạn đang cần một website làm nghiêm túc?</h2>
+      <p>
+        Chat Zalo để được tư vấn thẳng thắn – miễn phí:<br>
+        <strong>Làm được hay không – Gói nào phù hợp – Nói rõ ngay từ đầu.</strong>
+      </p>
+      <a href="https://zalo.me/0373453757" class="btn btn-outline btn-lg">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>Chat Zalo ngay (Miễn phí)</span>
+      </a>
+      <small class="cta-note">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M8 1C6.61667 1 5.26664 1.41054 4.08326 2.18402C2.89991 2.95749 1.93174 4.06173 1.28769 5.36342C0.643633 6.66512 0.349967 8.11111 0.433597 9.55554C0.517228 11 0.974517 12.3889 1.7574 13.5926C2.54029 14.7963 3.62267 15.7714 4.8946 16.4265C6.16653 17.0817 7.58559 17.3946 9.01392 17.3333C10.4423 17.272 11.8251 16.8382 13.0406 16.0709C14.2561 15.3037 15.2623 14.2292 15.96 12.9444L8 8V1Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Tư vấn miễn phí – Không ràng buộc – Không spam – Phản hồi trong 5 phút
+      </small>
+    </div>
   </div>
 </section>
 
-<script src="/assets/js/main.js"></script>
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="footer-logo">W3N</div>
+        <p>Website 3 Ngày - Thiết kế website bán hàng chuyên nghiệp</p>
+      </div>
+      <div class="footer-links">
+        <h4>Liên kết</h4>
+        <a href="#hero">Trang chủ</a>
+        <a href="#about">Giới thiệu</a>
+        <a href="#pricing">Bảng giá</a>
+        <a href="#process">Quy trình</a>
+      </div>
+      <div class="footer-contact">
+        <h4>Liên hệ</h4>
+        <p>📱 Zalo: 0373453757</p>
+        <p>📧 Email: contact@website3ngay.com</p>
+        <p>📍 TP. Hồ Chí Minh</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Website 3 Ngày. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll to top button -->
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <path d="M12 19V5M5 12L12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
+
+<script src="script.js"></script>
 </body>
 </html>
